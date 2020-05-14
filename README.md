@@ -1,6 +1,8 @@
 # myblog-mybaits
 个人博客系统（SpringBoot+Mybatis）
 
+博客地址：https://onestar.newstar.net.cn/
+
 
 > 本文将从技术栈、功能需求、数据库设计来讲述，前端页面展示可以看我上一篇文章[：【SpringBoot搭建个人博客】- 前端页面展示（一）](https://onestar.newstar.net.cn/blog/37)
 
