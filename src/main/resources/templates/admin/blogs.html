@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>博客管理</title>
+  <link href="../static/images/favicon.ico" th:href="@{/images/me.jpg}" rel="icon" type="image/x-ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+  <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
+</head>
+<body>
+
+  <!--导航栏-->
+  <nav class="ui inverted gird-header" >
+    <div class="ui container">
+      <div class="ui inverted secondary stackable menu">
+        <h2 class="ui olive header item" style="font-family: STSong">管理后台</h2>
+        <a href="#" th:href="@{/admin/blogs}" class="active m-item item m-mobile-hide"><i class="home icon"></i>文章管理</a>
+        <a href="#" th:href="@{/admin/types}" class=" m-item item m-mobile-hide"><i class="clone outline icon"></i>分类管理</a>
+        <a href="#" th:href="@{/admin/friendlinks}" class=" m-item item m-mobile-hide"><i class="pencil alternate icon"></i>友链管理</a>
+        <a href="#" th:href="@{/admin/pictures}" class=" m-item item m-mobile-hide"><i class="image icon"></i>相册管理</a>
+        <div class="right m-item m-mobile-hide menu">
+          <div class="ui dropdown  item">
+            <div class="text">
+              <img class="ui avatar image" src="/static/images/me.jpg" th:src="@{/images/me.jpg}">
+              <span>oneStar</span>
+            </div>
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <a href="#" th:href="@{/admin/logout}" class="item">注销</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+      <i class="sidebar icon"></i>
+    </a>
+  </nav>
+  <div class="m-padded-tb-hugex">
+  <div class="ui attached pointing menu">
+    <div class="ui container">
+      <div class="right menu">
+        <a href="#" th:href="@{/admin/blogs/input}" class=" item">发布</a>
+        <a href="#" th:href="@{/admin/blogs}" class="teal active item">列表</a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+  <!--中间内容-->
+  <div  class="">
+    <div class="ui container">
+      <div  class="ui secondary segment form">
+        <input type="hidden" name="page" >
+        <div class="inline fields">
+          <div class="field">
+            <input type="text" name="title" placeholder="标题">
+          </div>
+          <div class="field">
+            <div class="ui labeled action input">
+              <div class="ui type selection dropdown">
+                <input type="hidden" name="typeId">
+                <i class="dropdown icon"></i>
+                <div class="default text">分类</div>
+                <div class="menu">
+                  <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">我的故事</div>
+                </div>
+              </div>
+              <button id="clear-btn" class="ui compact button">clear</button>
+            </div>
+
+          </div>
+          <!--<div class="field">-->
+            <!--<div class="ui checkbox">-->
+              <!--<input type="checkbox" id="recommend" name="recommend">-->
+              <!--<label for="recommend">推荐</label>-->
+            <!--</div>-->
+          <!--</div>-->
+          <div class="field">
+            <button  type="button" id="search-btn" class="ui mini teal basic button"><i class="search icon"></i>搜索</button>
+          </div>
+        </div>
+      </div>
+      <div id="table-container">
+        <table th:fragment="blogList" class="ui compact teal table">
+          <thead>
+          <tr align="center">
+            <th>ID</th>
+            <th>标题</th>
+            <th>类型</th>
+            <th>推荐</th>
+            <th>状态</th>
+            <th>更新时间</th>
+            <th>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr align="center" th:each="blog,iterStat : ${pageInfo.list}">
+            <td th:text="${iterStat.count}">1</td>
+            <td th:text="${blog.title}">大圣，此去欲何?</td>
+            <td th:text="${blog.getType().name}">我的故事</td>
+            <td th:text="${blog.recommend} ? '是':'否'">是</td>
+            <td th:text="${blog.published} ? '发布':'草稿'">草稿</td>
+            <td th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd HH:mm')}">2020-01-02 05:20</td>
+            <td>
+              <!--th:href="@{/admin/types/{id}/input(id=${type.id})}"-->
+              <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini teal basic button">编辑</a>
+              <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" onclick="return confirm('确定要删除该文章吗？三思啊! 删了可就没了！')" class="ui mini red basic button">删除</a>
+            </td>
+          </tr>
+          </tbody>
+          <tfoot>
+          <tr>
+            <th colspan="7">
+              <div class="ui inverted divided stackable grid">
+                <div class="three wide column" align="center">
+                  <a class="item" th:href="@{/admin/blogs(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}" th:unless="${pageInfo.isFirstPage}">上一页</a>
+                </div>
+
+                <div class="ten wide column" align="center">
+                  <p>第 <span th:text="${pageInfo.pageNum}"></span> 页，共 <span th:text="${pageInfo.pages}"></span> 页，有 <span th:text="${pageInfo.total}"></span> 篇文章</p>
+                </div>
+
+                <div class="three wide column" align="center">
+                  <a class="item" th:href="@{/admin/blogs(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}" th:unless="${pageInfo.isLastPage}">下一页</a>
+                </div>
+              </div>
+              <div align="center">
+                <a href="#" th:href="@{/admin/blogs/input}">
+                  <button type="button" class="ui teal button m-mobile-wide m-margin-top"><i class="pencil icon"></i>新增</button>
+                </a>
+              </div>
+            </th>
+          </tr>
+          </tfoot>
+        </table>
+
+        <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+          <i class="close icon"></i>
+          <div class="" th:text="|提示： ${message}">提示：操作成功！</div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <!--底部栏-->
+  <footer class="ui inverted vertical segment m-padded-tb-massive m-opacity">
+    <!--容器-->
+    <div class="ui center aligned container">
+      <div class="ui inverted divided stackable grid">
+        <div class="four wide column">
+          <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced m-margin-top-max" >联系我</div>
+          <!--<div id="newblog-container">-->
+          <!--<div class="ui inverted link list" th:fragment="newblogList">-->
+          <!--<a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item m-text-thin" th:each="blog : ${newblogs}" th:text="${blog.title}">最新文章</a>-->
+          <!--</div>-->
+          <!--</div>-->
+          <div class="ui inverted link list">
+            <div href="#" class="m-text-thin">Email：onestarlr@hotmail.com</div>
+            <div href="#" class="m-text-thin">QQ：316392836</div>
+          </div>
+        </div>
+
+        <div class="four wide column" >
+          <div class="ui inverted link list">
+            <div class="item">
+              <!--微信二维码-->
+              <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >关注公众号</div>
+              <img src="../../static/images/oneStar.jpg" th:src="@{/images/oneStar.jpg}"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
+            </div>
+          </div>
+        </div>
+
+        <div class="four wide column">
+          <div class="ui inverted link list">
+            <div class="item">
+              <!--微信二维码-->
+              <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >问题交流（QQ群）</div>
+              <img src="../../static/images/QQ-question.jpg" th:src="@{/images/QQ-question.jpg}"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
+            </div>
+          </div>
+        </div>
+        <!--博客运行时间统计-->
+        <div class="four wide column">
+          <div style="font-size: large;font-weight: bold" class="ui inverted  m-text-thin m-text-spaced m-margin-top">客栈信息</div>
+          <!--<p id="htmer_time" class="item m-text-thin"></p>-->
+          <div id="blog-message">
+            <div class="ui inverted link list" style="align-content: center;margin-top: 10px" th:fragment="blogMessage">
+              <div class="m-text-thin" style="text-align: left;margin-left: 75px;">
+                文章总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;" th:text="${blogTotal}"> 14 </h2> 篇
+              </div>
+              <div class="m-text-thin" style="text-align: left;margin-left: 75px">
+                访问总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;" th:text="${blogViewTotal}"> 14 </h2> 次
+              </div>
+              <div class="m-text-thin" style="text-align: left;margin-left: 75px">
+                评论总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;" th:text="${blogCommentTotal}"> 14 </h2> 条
+              </div>
+              <div class="m-text-thin" style="text-align: left;margin-left: 75px">
+                留言总数： <h2 class="ui orange header m-inline-block m-margin-top-null" style="font-size:medium;" th:text="${blogMessageTotal}"> 14 </h2> 条
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui inverted section divider"></div>
+      <div style="color: #F08047;margin-top: -18px" class="ui inverted m-text-thin m-text-spaced">我的客栈已营业：<span id="htmer_time" class="item m-text-thin"></span> (*๓´╰╯`๓)</div>
+      <a rel="nofollow" href="http://www.beian.miit.gov.cn" target="_blank">赣ICP备20004408号-1</a>
+    </div>
+    </div>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+
+  <script>
+      // $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
+
+      $('#blog-message').load(/*[[@{/footer/blogmessage}]]*/"/footer/blogmessage");
+
+      // 运行时间统计
+      function secondToDate(second) {
+          if (!second) {
+              return 0;
+          }
+          var time = new Array(0, 0, 0, 0, 0);
+          if (second >= 365 * 24 * 3600) {
+              time[0] = parseInt(second / (365 * 24 * 3600));
+              second %= 365 * 24 * 3600;
+          }
+          if (second >= 24 * 3600) {
+              time[1] = parseInt(second / (24 * 3600));
+              second %= 24 * 3600;
+          }
+          if (second >= 3600) {
+              time[2] = parseInt(second / 3600);
+              second %= 3600;
+          }
+          if (second >= 60) {
+              time[3] = parseInt(second / 60);
+              second %= 60;
+          }
+          if (second > 0) {
+              time[4] = second;
+          }
+          return time;
+      }
+      function setTime() {
+          /*此处为网站的创建时间*/
+          var create_time = Math.round(new Date(Date.UTC(2020, 01, 25, 15, 15, 15)).getTime() / 1000);
+          var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+          currentTime = secondToDate((timestamp - create_time));
+          currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
+              + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
+              + '秒';
+          document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+      }
+      setInterval(setTime, 1000);
+
+
+
+
+    $('.menu.toggle').click(function () {
+      $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.ui.dropdown').dropdown({
+      on : 'hover'
+    });
+
+    //消息提示关闭初始化
+    $('.message .close')
+      .on('click', function () {
+        $(this)
+          .closest('.message')
+          .transition('fade');
+      });
+
+    $('#clear-btn')
+      .on('click', function() {
+        $('.ui.type.dropdown')
+          .dropdown('clear')
+        ;
+      })
+    ;
+
+    function page(obj) {
+      $("[name='page']").val($(obj).data("page"));
+      loaddata();
+    }
+
+    $("#search-btn").click(function () {
+      $("[name='page']").val(0);
+      loaddata();
+    });
+    function loaddata() {
+      $("#table-container").load(/*[[@{/admin/blogs/search}]]*/"/admin/blogs/search",{
+        title : $("[name='title']").val(),
+        typeId : $("[name='typeId']").val(),
+        page : $("[name='page']").val()
+      });
+    }
+
+  </script>
+</body>
+</html>

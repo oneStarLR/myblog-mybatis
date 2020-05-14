@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.star.dao.PictureDao">
+
+    <!--查询所有照片-->
+    <select id="listPicture" resultType="com.star.entity.Picture">
+        select * from myblog.t_picture order by t_picture.id desc
+    </select>
+
+    <!--添加图片-->
+    <insert id="savePicture" parameterType="com.star.entity.Picture">
+        insert into myblog.t_picture (picturename,picturetime,pictureaddress,picturedescription)
+        values (#{picturename},#{picturetime},#{pictureaddress},#{picturedescription})
+    </insert>
+
+    <!--根据id查询照片-->
+    <select id="getPicture" resultType="com.star.entity.Picture">
+        select * from myblog.t_picture p where p.id = #{id}
+    </select>
+
+    <!--编辑修改相册-->
+    <update id="updatePicture" parameterType="com.star.entity.Picture">
+        update myblog.t_picture
+        set picturename = #{picturename}, picturetime = #{picturetime}, pictureaddress = #{pictureaddress}, picturedescription = #{picturedescription}
+        where id = #{id};
+    </update>
+
+    <!--删除照片-->
+    <delete id="deletePicture" >
+        delete from myblog.t_picture where id = #{id}
+    </delete>
+
+</mapper>

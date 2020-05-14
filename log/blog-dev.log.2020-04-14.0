@@ -1,0 +1,330 @@
+2020-04-14 22:34:26.765  INFO 6580 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on DESKTOP-5QO2IGL with PID 6580 (E:\MyBlog\myblog\target\classes started by OneStar in E:\MyBlog\myblog)
+2020-04-14 22:34:26.800 DEBUG 6580 --- [restartedMain] com.star.MyblogApplication               : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-14 22:34:26.800  INFO 6580 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: dev
+2020-04-14 22:34:26.882  INFO 6580 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-14 22:34:26.883  INFO 6580 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-14 22:34:30.120  INFO 6580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-04-14 22:34:30.132  INFO 6580 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-14 22:34:30.132  INFO 6580 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-14 22:34:30.354  INFO 6580 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-14 22:34:30.355  INFO 6580 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3472 ms
+2020-04-14 22:34:31.798  INFO 6580 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-14 22:34:31.954  INFO 6580 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-14 22:34:33.769  INFO 6580 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-14 22:34:33.827  INFO 6580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-04-14 22:34:33.831  INFO 6580 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 8.879 seconds (JVM running for 11.494)
+2020-04-14 22:35:09.738  INFO 6580 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-14 22:35:09.739  INFO 6580 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-14 22:35:09.758  INFO 6580 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2020-04-14 22:35:09.817  INFO 6580 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1]}
+2020-04-14 22:35:09.863  INFO 6580 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-14 22:35:10.088  INFO 6580 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-14 22:35:10.153 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.dao.BlogDao.getFirstPageBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM myblog.t_blog b, myblog.t_type t, myblog.t_user u WHERE b.type_id = t.id AND u.id = b.user_id 
+2020-04-14 22:35:10.185 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.dao.BlogDao.getFirstPageBlog_COUNT   : ==> Parameters: 
+2020-04-14 22:35:10.250 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.dao.BlogDao.getFirstPageBlog_COUNT   : <==      Total: 1
+2020-04-14 22:35:10.253 DEBUG 6580 --- [http-nio-8080-exec-1] com.star.dao.BlogDao.getFirstPageBlog    : ==>  Preparing: select b.id,b.title,b.first_picture, b.views,b.update_time,b.description, t.name , u.nickname, u.avatar from myblog.t_blog b, myblog.t_type t,myblog.t_user u where b.type_id = t.id and u.id = b.user_id order by b.update_time desc LIMIT ? 
+2020-04-14 22:35:10.269 DEBUG 6580 --- [http-nio-8080-exec-1] com.star.dao.BlogDao.getFirstPageBlog    : ==> Parameters: 10(Integer)
+2020-04-14 22:35:10.276 DEBUG 6580 --- [http-nio-8080-exec-1] com.star.dao.BlogDao.getFirstPageBlog    : <==      Total: 10
+2020-04-14 22:35:10.277 DEBUG 6580 --- [http-nio-8080-exec-1] c.star.dao.BlogDao.getAllRecommendBlog   : ==>  Preparing: select * from myblog.t_blog where t_blog.recommend = true order by t_blog.update_time desc limit 4; 
+2020-04-14 22:35:10.278 DEBUG 6580 --- [http-nio-8080-exec-1] c.star.dao.BlogDao.getAllRecommendBlog   : ==> Parameters: 
+2020-04-14 22:35:10.305 DEBUG 6580 --- [http-nio-8080-exec-1] c.star.dao.BlogDao.getAllRecommendBlog   : <==      Total: 4
+2020-04-14 22:35:10.308  INFO 6580 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index
+2020-04-14 22:35:15.160  INFO 6580 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/1', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[1, {}]}
+2020-04-14 22:35:15.169 DEBUG 6580 --- [http-nio-8080-exec-4] com.star.dao.BlogDao.getDetailedBlog     : ==>  Preparing: select b.id bid,b.first_picture,b.flag,b.title,b.content,b.views,b.update_time,b.commentabled,b.share_statement,b.appreciation, u.nickname,u.avatar,t.name from myblog.t_blog b,myblog.t_user u, myblog.t_type t where b.user_id = u.id and b.type_id = t.id and b.id = ? 
+2020-04-14 22:35:15.170 DEBUG 6580 --- [http-nio-8080-exec-4] com.star.dao.BlogDao.getDetailedBlog     : ==> Parameters: 1(Long)
+2020-04-14 22:35:15.175 DEBUG 6580 --- [http-nio-8080-exec-4] com.star.dao.BlogDao.getDetailedBlog     : <==      Total: 1
+2020-04-14 22:35:15.225 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNull         : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.225 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNull         : ==> Parameters: 1(Long), -1(Long)
+2020-04-14 22:35:15.235 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNull         : <==      Total: 6
+2020-04-14 22:35:15.236 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNotNull      : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.236 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNotNull      : ==> Parameters: 1(Long), 60(Long)
+2020-04-14 22:35:15.238 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNotNull      : <==      Total: 1
+2020-04-14 22:35:15.239 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.239 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 61(Long)
+2020-04-14 22:35:15.242 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 2
+2020-04-14 22:35:15.245 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.247 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 63(Long)
+2020-04-14 22:35:15.250 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:15.251 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.251 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 62(Long)
+2020-04-14 22:35:15.253 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:15.255 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNotNull      : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.256 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNotNull      : ==> Parameters: 1(Long), 52(Long)
+2020-04-14 22:35:15.260 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNotNull      : <==      Total: 2
+2020-04-14 22:35:15.262 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.263 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 59(Long)
+2020-04-14 22:35:15.267 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:15.268 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.270 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 53(Long)
+2020-04-14 22:35:15.275 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 2
+2020-04-14 22:35:15.278 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.279 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 57(Long)
+2020-04-14 22:35:15.284 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:15.285 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.285 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 58(Long)
+2020-04-14 22:35:15.286 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:15.287 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.288 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 54(Long)
+2020-04-14 22:35:15.289 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:15.290 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.291 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 55(Long)
+2020-04-14 22:35:15.295 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:15.303 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.304 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 56(Long)
+2020-04-14 22:35:15.305 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:15.307 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNotNull      : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.308 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNotNull      : ==> Parameters: 1(Long), 36(Long)
+2020-04-14 22:35:15.310 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNotNull      : <==      Total: 2
+2020-04-14 22:35:15.311 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.312 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 42(Long)
+2020-04-14 22:35:15.313 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:15.315 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.316 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 37(Long)
+2020-04-14 22:35:15.317 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:15.319 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.319 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 38(Long)
+2020-04-14 22:35:15.321 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 2
+2020-04-14 22:35:15.327 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.329 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 41(Long)
+2020-04-14 22:35:15.332 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:15.333 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.333 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 39(Long)
+2020-04-14 22:35:15.335 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:15.335 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.336 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 40(Long)
+2020-04-14 22:35:15.337 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:15.341 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNotNull      : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.344 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNotNull      : ==> Parameters: 1(Long), 31(Long)
+2020-04-14 22:35:15.346 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNotNull      : <==      Total: 1
+2020-04-14 22:35:15.349 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.350 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 32(Long)
+2020-04-14 22:35:15.352 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 2
+2020-04-14 22:35:15.352 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.352 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 35(Long)
+2020-04-14 22:35:15.353 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:15.354 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.354 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 33(Long)
+2020-04-14 22:35:15.355 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:15.356 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.356 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 34(Long)
+2020-04-14 22:35:15.360 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:15.365 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNotNull      : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.366 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNotNull      : ==> Parameters: 1(Long), 24(Long)
+2020-04-14 22:35:15.368 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNotNull      : <==      Total: 1
+2020-04-14 22:35:15.368 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.368 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 25(Long)
+2020-04-14 22:35:15.370 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:15.370 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.370 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 26(Long)
+2020-04-14 22:35:15.372 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 2
+2020-04-14 22:35:15.372 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.372 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 28(Long)
+2020-04-14 22:35:15.373 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:15.374 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.374 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 27(Long)
+2020-04-14 22:35:15.375 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:15.376 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNotNull      : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.376 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNotNull      : ==> Parameters: 1(Long), 19(Long)
+2020-04-14 22:35:15.377 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdParentIdNotNull      : <==      Total: 3
+2020-04-14 22:35:15.378 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.378 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 30(Long)
+2020-04-14 22:35:15.379 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:15.384 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.387 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 23(Long)
+2020-04-14 22:35:15.390 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:15.391 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.392 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 20(Long)
+2020-04-14 22:35:15.393 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:15.394 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.394 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 21(Long)
+2020-04-14 22:35:15.396 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:15.404 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.405 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 22(Long)
+2020-04-14 22:35:15.407 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:15.408 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:15.408 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 29(Long)
+2020-04-14 22:35:15.409 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:15.410  INFO 6580 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : blog
+2020-04-14 22:35:17.589  INFO 6580 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/1', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[1, {}]}
+2020-04-14 22:35:17.629 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNull         : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.630 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNull         : ==> Parameters: 1(Long), -1(Long)
+2020-04-14 22:35:17.644 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNull         : <==      Total: 6
+2020-04-14 22:35:17.645 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNotNull      : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.645 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNotNull      : ==> Parameters: 1(Long), 60(Long)
+2020-04-14 22:35:17.647 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNotNull      : <==      Total: 1
+2020-04-14 22:35:17.655 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.656 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 61(Long)
+2020-04-14 22:35:17.659 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 2
+2020-04-14 22:35:17.661 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.661 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 63(Long)
+2020-04-14 22:35:17.663 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:17.663 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.664 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 62(Long)
+2020-04-14 22:35:17.671 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:17.673 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNotNull      : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.674 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNotNull      : ==> Parameters: 1(Long), 52(Long)
+2020-04-14 22:35:17.676 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNotNull      : <==      Total: 2
+2020-04-14 22:35:17.677 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.678 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 59(Long)
+2020-04-14 22:35:17.678 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:17.679 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.679 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 53(Long)
+2020-04-14 22:35:17.681 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 2
+2020-04-14 22:35:17.687 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.689 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 57(Long)
+2020-04-14 22:35:17.692 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:17.692 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.692 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 58(Long)
+2020-04-14 22:35:17.693 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:17.694 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.695 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 54(Long)
+2020-04-14 22:35:17.696 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:17.697 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.698 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 55(Long)
+2020-04-14 22:35:17.701 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:17.702 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.702 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 56(Long)
+2020-04-14 22:35:17.704 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:17.708 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNotNull      : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.709 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNotNull      : ==> Parameters: 1(Long), 36(Long)
+2020-04-14 22:35:17.712 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNotNull      : <==      Total: 2
+2020-04-14 22:35:17.713 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.714 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 42(Long)
+2020-04-14 22:35:17.717 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:17.718 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.718 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 37(Long)
+2020-04-14 22:35:17.720 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:17.720 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.721 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 38(Long)
+2020-04-14 22:35:17.723 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 2
+2020-04-14 22:35:17.726 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.728 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 41(Long)
+2020-04-14 22:35:17.732 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:17.733 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.733 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 39(Long)
+2020-04-14 22:35:17.735 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:17.735 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.736 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 40(Long)
+2020-04-14 22:35:17.737 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:17.738 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNotNull      : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.738 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNotNull      : ==> Parameters: 1(Long), 31(Long)
+2020-04-14 22:35:17.740 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNotNull      : <==      Total: 1
+2020-04-14 22:35:17.741 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.741 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 32(Long)
+2020-04-14 22:35:17.743 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 2
+2020-04-14 22:35:17.744 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.745 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 35(Long)
+2020-04-14 22:35:17.752 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:17.754 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.754 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 33(Long)
+2020-04-14 22:35:17.756 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:17.757 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.758 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 34(Long)
+2020-04-14 22:35:17.759 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:17.760 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNotNull      : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.760 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNotNull      : ==> Parameters: 1(Long), 24(Long)
+2020-04-14 22:35:17.762 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNotNull      : <==      Total: 1
+2020-04-14 22:35:17.762 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.763 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 25(Long)
+2020-04-14 22:35:17.765 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:17.771 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.773 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 26(Long)
+2020-04-14 22:35:17.776 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 2
+2020-04-14 22:35:17.777 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.777 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 28(Long)
+2020-04-14 22:35:17.778 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:17.779 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.780 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 27(Long)
+2020-04-14 22:35:17.783 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:17.789 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNotNull      : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.791 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNotNull      : ==> Parameters: 1(Long), 19(Long)
+2020-04-14 22:35:17.793 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdParentIdNotNull      : <==      Total: 3
+2020-04-14 22:35:17.794 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.794 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 30(Long)
+2020-04-14 22:35:17.795 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:17.796 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.796 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 23(Long)
+2020-04-14 22:35:17.797 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:17.803 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.805 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 20(Long)
+2020-04-14 22:35:17.810 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:17.811 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.811 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 21(Long)
+2020-04-14 22:35:17.813 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:17.813 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.813 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 22(Long)
+2020-04-14 22:35:17.822 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 1
+2020-04-14 22:35:17.825 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 22:35:17.826 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : ==> Parameters: 1(Long), 29(Long)
+2020-04-14 22:35:17.827 DEBUG 6580 --- [http-nio-8080-exec-1] c.s.d.C.findByBlogIdAndReplayId          : <==      Total: 0
+2020-04-14 22:35:17.827  INFO 6580 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-04-14 23:08:58.025 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.UserDao.findByUsernameAndPassword  : ==>  Preparing: select * from myblog.t_user where username = ? and password = ?; 
+2020-04-14 23:08:58.026 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.UserDao.findByUsernameAndPassword  : ==> Parameters: oneStar(String), 4473634a5b6102e24e38b42d56e61b7c(String)
+2020-04-14 23:08:58.031 DEBUG 6580 --- [http-nio-8080-exec-4] c.s.d.UserDao.findByUsernameAndPassword  : <==      Total: 1
+2020-04-14 23:09:01.449 DEBUG 6580 --- [http-nio-8080-exec-5] c.s.dao.BlogDao.getAllBlogQuery_COUNT    : ==>  Preparing: SELECT count(0) FROM myblog.t_blog b LEFT OUTER JOIN myblog.t_type t ON b.type_id = t.id 
+2020-04-14 23:09:01.451 DEBUG 6580 --- [http-nio-8080-exec-5] c.s.dao.BlogDao.getAllBlogQuery_COUNT    : ==> Parameters: 
+2020-04-14 23:09:01.457 DEBUG 6580 --- [http-nio-8080-exec-5] c.s.dao.BlogDao.getAllBlogQuery_COUNT    : <==      Total: 1
+2020-04-14 23:09:01.459 DEBUG 6580 --- [http-nio-8080-exec-5] com.star.dao.BlogDao.getAllBlogQuery     : ==>  Preparing: SELECT b.id, b.title, b.update_time, b.recommend, b.published, b.type_id, t.id, t.name FROM myblog.t_blog b LEFT OUTER JOIN myblog.t_type t ON b.type_id = t.id order by update_time desc LIMIT ? 
+2020-04-14 23:09:01.459 DEBUG 6580 --- [http-nio-8080-exec-5] com.star.dao.BlogDao.getAllBlogQuery     : ==> Parameters: 10(Integer)
+2020-04-14 23:09:01.462 DEBUG 6580 --- [http-nio-8080-exec-5] com.star.dao.BlogDao.getAllBlogQuery     : <==      Total: 10
+2020-04-14 23:09:01.482 DEBUG 6580 --- [http-nio-8080-exec-5] com.star.dao.TypeDao.getAllType          : ==>  Preparing: select * from myblog.t_type 
+2020-04-14 23:09:01.482 DEBUG 6580 --- [http-nio-8080-exec-5] com.star.dao.TypeDao.getAllType          : ==> Parameters: 
+2020-04-14 23:09:01.491 DEBUG 6580 --- [http-nio-8080-exec-5] com.star.dao.TypeDao.getAllType          : <==      Total: 15
+2020-04-14 23:09:23.741 DEBUG 6580 --- [http-nio-8080-exec-5] com.star.dao.TypeDao.getAllType_COUNT    : ==>  Preparing: SELECT count(0) FROM myblog.t_type 
+2020-04-14 23:09:23.741 DEBUG 6580 --- [http-nio-8080-exec-5] com.star.dao.TypeDao.getAllType_COUNT    : ==> Parameters: 
+2020-04-14 23:09:23.742 DEBUG 6580 --- [http-nio-8080-exec-5] com.star.dao.TypeDao.getAllType_COUNT    : <==      Total: 1
+2020-04-14 23:09:23.745 DEBUG 6580 --- [http-nio-8080-exec-5] com.star.dao.TypeDao.getAllType          : ==>  Preparing: SELECT * FROM myblog.t_type order by id desc LIMIT ? 
+2020-04-14 23:09:23.746 DEBUG 6580 --- [http-nio-8080-exec-5] com.star.dao.TypeDao.getAllType          : ==> Parameters: 10(Integer)
+2020-04-14 23:09:23.749 DEBUG 6580 --- [http-nio-8080-exec-5] com.star.dao.TypeDao.getAllType          : <==      Total: 10
+2020-04-14 23:18:26.665  INFO 18308 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on DESKTOP-5QO2IGL with PID 18308 (E:\MyBlog\myblog\target\classes started by OneStar in E:\MyBlog\myblog)
+2020-04-14 23:18:26.669 DEBUG 18308 --- [restartedMain] com.star.MyblogApplication               : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-14 23:18:26.670  INFO 18308 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: dev
+2020-04-14 23:18:26.744  INFO 18308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-14 23:18:26.744  INFO 18308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-14 23:18:28.548  INFO 18308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-04-14 23:18:28.558  INFO 18308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-14 23:18:28.558  INFO 18308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-14 23:18:28.694  INFO 18308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-14 23:18:28.694  INFO 18308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1949 ms
+2020-04-14 23:18:29.688  INFO 18308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-14 23:18:29.865  INFO 18308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-14 23:18:30.372  INFO 18308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-14 23:18:30.425  INFO 18308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-04-14 23:18:30.430  INFO 18308 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 5.857 seconds (JVM running for 8.934)
+2020-04-14 23:18:46.431  INFO 18308 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-14 23:18:46.432  INFO 18308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-14 23:18:46.481  INFO 18308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 49 ms
+2020-04-14 23:18:46.580  INFO 18308 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1]}
+2020-04-14 23:18:46.624  INFO 18308 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-14 23:18:46.852  INFO 18308 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-14 23:18:46.916 DEBUG 18308 --- [http-nio-8080-exec-1] c.s.dao.BlogDao.getFirstPageBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM myblog.t_blog b, myblog.t_type t, myblog.t_user u WHERE b.type_id = t.id AND u.id = b.user_id 
+2020-04-14 23:18:46.947 DEBUG 18308 --- [http-nio-8080-exec-1] c.s.dao.BlogDao.getFirstPageBlog_COUNT   : ==> Parameters: 
+2020-04-14 23:18:47.005 DEBUG 18308 --- [http-nio-8080-exec-1] c.s.dao.BlogDao.getFirstPageBlog_COUNT   : <==      Total: 1
+2020-04-14 23:18:47.012 DEBUG 18308 --- [http-nio-8080-exec-1] com.star.dao.BlogDao.getFirstPageBlog    : ==>  Preparing: select b.id,b.title,b.first_picture, b.views,b.update_time,b.description, t.name , u.nickname, u.avatar from myblog.t_blog b, myblog.t_type t,myblog.t_user u where b.type_id = t.id and u.id = b.user_id order by b.update_time desc LIMIT ? 
+2020-04-14 23:18:47.013 DEBUG 18308 --- [http-nio-8080-exec-1] com.star.dao.BlogDao.getFirstPageBlog    : ==> Parameters: 10(Integer)
+2020-04-14 23:18:47.022 DEBUG 18308 --- [http-nio-8080-exec-1] com.star.dao.BlogDao.getFirstPageBlog    : <==      Total: 10
+2020-04-14 23:18:47.024 DEBUG 18308 --- [http-nio-8080-exec-1] c.star.dao.BlogDao.getAllRecommendBlog   : ==>  Preparing: select * from myblog.t_blog where t_blog.recommend = true order by t_blog.update_time desc limit 4; 
+2020-04-14 23:18:47.025 DEBUG 18308 --- [http-nio-8080-exec-1] c.star.dao.BlogDao.getAllRecommendBlog   : ==> Parameters: 
+2020-04-14 23:18:47.033 DEBUG 18308 --- [http-nio-8080-exec-1] c.star.dao.BlogDao.getAllRecommendBlog   : <==      Total: 4
+2020-04-14 23:18:47.037  INFO 18308 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index
+2020-04-14 23:19:21.649  INFO 18308 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/50', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[50, {}]}
+2020-04-14 23:19:21.656 DEBUG 18308 --- [http-nio-8080-exec-6] com.star.dao.BlogDao.getDetailedBlog     : ==>  Preparing: select b.id bid,b.first_picture,b.flag,b.title,b.content,b.views,b.update_time,b.commentabled,b.share_statement,b.appreciation, u.nickname,u.avatar,t.name from myblog.t_blog b,myblog.t_user u, myblog.t_type t where b.user_id = u.id and b.type_id = t.id and b.id = ? 
+2020-04-14 23:19:21.658 DEBUG 18308 --- [http-nio-8080-exec-6] com.star.dao.BlogDao.getDetailedBlog     : ==> Parameters: 50(Long)
+2020-04-14 23:19:21.663 DEBUG 18308 --- [http-nio-8080-exec-6] com.star.dao.BlogDao.getDetailedBlog     : <==      Total: 1
+2020-04-14 23:19:21.717 DEBUG 18308 --- [http-nio-8080-exec-6] c.s.d.C.findByBlogIdParentIdNull         : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 23:19:21.717 DEBUG 18308 --- [http-nio-8080-exec-6] c.s.d.C.findByBlogIdParentIdNull         : ==> Parameters: 50(Long), -1(Long)
+2020-04-14 23:19:21.728 DEBUG 18308 --- [http-nio-8080-exec-6] c.s.d.C.findByBlogIdParentIdNull         : <==      Total: 0
+2020-04-14 23:19:21.729  INFO 18308 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : blog
+2020-04-14 23:19:28.151  INFO 18308 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/1', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[1, {}]}
+2020-04-14 23:19:28.152 DEBUG 18308 --- [http-nio-8080-exec-8] com.star.dao.BlogDao.getDetailedBlog     : ==>  Preparing: select b.id bid,b.first_picture,b.flag,b.title,b.content,b.views,b.update_time,b.commentabled,b.share_statement,b.appreciation, u.nickname,u.avatar,t.name from myblog.t_blog b,myblog.t_user u, myblog.t_type t where b.user_id = u.id and b.type_id = t.id and b.id = ? 
+2020-04-14 23:19:28.153 DEBUG 18308 --- [http-nio-8080-exec-8] com.star.dao.BlogDao.getDetailedBlog     : ==> Parameters: 1(Long)
+2020-04-14 23:19:28.166 DEBUG 18308 --- [http-nio-8080-exec-8] com.star.dao.BlogDao.getDetailedBlog     : <==      Total: 1
+2020-04-14 23:19:28.168 DEBUG 18308 --- [http-nio-8080-exec-8] c.s.d.C.findByBlogIdParentIdNull         : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 23:19:28.173 DEBUG 18308 --- [http-nio-8080-exec-8] c.s.d.C.findByBlogIdParentIdNull         : ==> Parameters: 1(Long), -1(Long)
+2020-04-14 23:19:28.175 DEBUG 18308 --- [http-nio-8080-exec-8] c.s.d.C.findByBlogIdParentIdNull         : <==      Total: 0
+2020-04-14 23:19:28.175  INFO 18308 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : blog
+2020-04-14 23:19:29.311  INFO 18308 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/1', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[1, {}]}
+2020-04-14 23:19:29.324 DEBUG 18308 --- [http-nio-8080-exec-2] c.s.d.C.findByBlogIdParentIdNull         : ==>  Preparing: select * from myblog.t_comment c where c.blog_id = ? and c.parent_comment_id = ? order by c.create_time desc 
+2020-04-14 23:19:29.328 DEBUG 18308 --- [http-nio-8080-exec-2] c.s.d.C.findByBlogIdParentIdNull         : ==> Parameters: 1(Long), -1(Long)
+2020-04-14 23:19:29.330 DEBUG 18308 --- [http-nio-8080-exec-2] c.s.d.C.findByBlogIdParentIdNull         : <==      Total: 0
+2020-04-14 23:19:29.331  INFO 18308 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : blog :: commentList

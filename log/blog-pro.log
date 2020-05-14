@@ -1,0 +1,422 @@
+2020-05-14 09:00:10.540  INFO 7432 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on DESKTOP-5QO2IGL with PID 7432 (E:\MyBlog\myblog\target\classes started by OneStar in E:\MyBlog\myblog)
+2020-05-14 09:00:10.548  INFO 7432 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2020-05-14 09:00:16.948  INFO 7432 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 7.347 seconds (JVM running for 14.565)
+2020-05-14 09:02:35.123  INFO 7432 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2020-05-14 09:02:35.833  INFO 7432 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index
+2020-05-14 09:02:38.799  INFO 7432 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 09:02:38.854  INFO 7432 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 09:02:54.206  INFO 7432 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[58, {}]}
+2020-05-14 09:02:54.289  INFO 7432 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : blog
+2020-05-14 09:02:55.374  INFO 7432 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 09:02:55.380  INFO 7432 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 09:02:55.830  INFO 7432 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[58, {}]}
+2020-05-14 09:02:55.848  INFO 7432 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-05-14 09:03:04.990  INFO 7432 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.post', args=[Comment{id=null, nickname='oneStar', email='onestarlr@hotmail.com', content='asdf', avatar='null', createTime=null, blogId=58, parentCommentId=null, parentNickname='null', replyComments=[], parentComment=Comment{id=-1, nickname='null', email='null', content='null', avatar='null', createTime=null, blogId=null, parentCommentId=null, parentNickname='null', replyComments=[], parentComment=null, adminComment=false, blog=null}, adminComment=false, blog=null}, org.apache.catalina.session.StandardSessionFacade@69f6086d, {comment=Comment{id=null, nickname='oneStar', email='onestarlr@hotmail.com', content='asdf', avatar='null', createTime=null, blogId=58, parentCommentId=null, parentNickname='null', replyComments=[], parentComment=Comment{id=-1, nickname='null', email='null', content='null', avatar='null', createTime=null, blogId=null, parentCommentId=null, parentNickname='null', replyComments=[], parentComment=null, adminComment=false, blog=null}, adminComment=false, blog=null}, org.springframework.validation.BindingResult.comment=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-05-14 09:03:05.016  INFO 7432 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-05-14 09:03:12.882  INFO 7432 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[58, {}]}
+2020-05-14 09:03:12.896  INFO 7432 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : blog
+2020-05-14 09:03:13.619  INFO 7432 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 09:03:13.629  INFO 7432 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 09:03:13.770  INFO 7432 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[58, {}]}
+2020-05-14 09:03:13.776  INFO 7432 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-05-14 09:08:33.437  INFO 7244 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on DESKTOP-5QO2IGL with PID 7244 (E:\MyBlog\myblog\target\classes started by OneStar in E:\MyBlog\myblog)
+2020-05-14 09:08:33.453  INFO 7244 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2020-05-14 09:08:36.856  INFO 7244 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 5.18 seconds (JVM running for 7.382)
+2020-05-14 09:08:41.820  INFO 7244 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2020-05-14 09:08:42.195  INFO 7244 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index
+2020-05-14 09:08:42.939  INFO 7244 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 09:08:42.954  INFO 7244 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 09:08:45.951  INFO 7244 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[58, {}]}
+2020-05-14 09:08:46.019  INFO 7244 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : blog
+2020-05-14 09:08:46.894  INFO 7244 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 09:08:46.900  INFO 7244 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 09:08:47.197  INFO 7244 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[58, {}]}
+2020-05-14 09:08:47.224  INFO 7244 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-05-14 09:10:44.781  INFO 7244 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[58, {}]}
+2020-05-14 09:10:44.800  INFO 7244 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : blog
+2020-05-14 09:10:45.559  INFO 7244 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 09:10:45.565  INFO 7244 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 09:10:45.778  INFO 7244 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[58, {}]}
+2020-05-14 09:10:45.788  INFO 7244 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-05-14 09:10:50.705  INFO 7244 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[58, {}]}
+2020-05-14 09:10:50.724  INFO 7244 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : blog
+2020-05-14 09:10:51.367  INFO 7244 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 09:10:51.376  INFO 7244 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 09:10:51.494  INFO 7244 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[58, {}]}
+2020-05-14 09:10:51.501  INFO 7244 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-05-14 09:10:59.525  INFO 7244 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[58, {}]}
+2020-05-14 09:10:59.550  INFO 7244 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : blog
+2020-05-14 09:11:00.546  INFO 7244 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 09:11:00.553  INFO 7244 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 09:11:00.717  INFO 7244 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[58, {}]}
+2020-05-14 09:11:00.740  INFO 7244 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-05-14 09:11:32.096  INFO 13704 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on DESKTOP-5QO2IGL with PID 13704 (E:\MyBlog\myblog\target\classes started by OneStar in E:\MyBlog\myblog)
+2020-05-14 09:11:32.100  INFO 13704 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2020-05-14 09:11:36.694  INFO 13704 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 5.652 seconds (JVM running for 10.397)
+2020-05-14 09:17:19.595  INFO 13704 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[58, {}]}
+2020-05-14 09:17:19.993  INFO 13704 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : blog
+2020-05-14 09:17:21.170  INFO 13704 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 09:17:21.184  INFO 13704 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 09:17:21.378  INFO 13704 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[58, {}]}
+2020-05-14 09:17:21.417  INFO 13704 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-05-14 09:17:29.764  INFO 13704 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[58, {}]}
+2020-05-14 09:17:29.781  INFO 13704 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : blog
+2020-05-14 09:17:30.458  INFO 13704 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 09:17:30.463  INFO 13704 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 09:17:30.584  INFO 13704 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[58, {}]}
+2020-05-14 09:17:30.596  INFO 13704 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-05-14 09:17:33.149  INFO 13704 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[58, {}]}
+2020-05-14 09:17:33.166  INFO 13704 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : blog
+2020-05-14 09:17:33.866  INFO 13704 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 09:17:33.876  INFO 13704 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 09:17:33.998  INFO 13704 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[58, {}]}
+2020-05-14 09:17:34.015  INFO 13704 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-05-14 09:17:45.995  INFO 13704 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on DESKTOP-5QO2IGL with PID 13704 (E:\MyBlog\myblog\target\classes started by OneStar in E:\MyBlog\myblog)
+2020-05-14 09:17:45.995  INFO 13704 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2020-05-14 09:17:49.551  INFO 13704 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 3.622 seconds (JVM running for 383.254)
+2020-05-14 09:17:50.612  INFO 13704 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/58', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blog', args=[58, {}]}
+2020-05-14 09:17:50.693  INFO 13704 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : blog
+2020-05-14 09:17:51.597  INFO 13704 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 09:17:51.604  INFO 13704 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 09:17:51.741  INFO 13704 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[58, {}]}
+2020-05-14 09:17:51.762  INFO 13704 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-05-14 09:17:57.676  INFO 13704 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[58, {}]}
+2020-05-14 09:17:57.693  INFO 13704 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Result : blog
+2020-05-14 09:17:59.835  INFO 13704 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 09:17:59.843  INFO 13704 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 09:17:59.981  INFO 13704 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/58', ip='127.0.0.1', classMethod='com.star.controller.CommentController.comments', args=[58, {}]}
+2020-05-14 09:17:59.990  INFO 13704 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-05-14 09:22:27.653  INFO 13704 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[58, {}]}
+2020-05-14 09:22:27.672  INFO 13704 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : blog
+2020-05-14 09:22:28.367  INFO 13704 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 09:22:28.374  INFO 13704 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 09:22:28.608  INFO 13704 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[58, {}]}
+2020-05-14 09:22:28.626  INFO 13704 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-05-14 09:23:18.843  INFO 13704 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/picture', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.PictureShowController.friends', args=[{}]}
+2020-05-14 09:23:18.858  INFO 13704 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : picture
+2020-05-14 09:23:19.281  INFO 13704 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 09:23:19.291  INFO 13704 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 09:23:21.843  INFO 13704 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/about', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.AboutShowController.about', args=[]}
+2020-05-14 09:23:21.853  INFO 13704 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : about
+2020-05-14 09:23:22.129  INFO 13704 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 09:23:22.136  INFO 13704 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 09:23:30.875  INFO 13704 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2020-05-14 09:23:30.918  INFO 13704 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Result : index
+2020-05-14 09:23:31.184  INFO 13704 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 09:23:31.187  INFO 13704 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 10:09:25.517  INFO 13704 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2020-05-14 10:09:25.538  INFO 13704 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : index
+2020-05-14 10:09:25.961  INFO 13704 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 10:09:25.969  INFO 13704 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 10:09:27.352  INFO 13704 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/message', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.MessageController.message', args=[]}
+2020-05-14 10:09:27.358  INFO 13704 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Result : message
+2020-05-14 10:09:27.586  INFO 13704 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 10:09:27.590  INFO 13704 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 10:09:27.651  INFO 13704 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/messagecomment', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.MessageController.messages', args=[{}]}
+2020-05-14 10:09:27.670  INFO 13704 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : message::messageList
+2020-05-14 10:10:02.648  INFO 13704 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 10:10:02.653  INFO 13704 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 10:10:06.576  INFO 13704 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2020-05-14 10:10:06.589  INFO 13704 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Result : index
+2020-05-14 10:10:06.934  INFO 13704 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 10:10:06.939  INFO 13704 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 10:10:09.356  INFO 13704 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/message', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.MessageController.message', args=[]}
+2020-05-14 10:10:09.356  INFO 13704 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : message
+2020-05-14 10:10:09.484  INFO 13704 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 10:10:09.488  INFO 13704 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 10:10:09.541  INFO 13704 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/messagecomment', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.MessageController.messages', args=[{}]}
+2020-05-14 10:10:09.559  INFO 13704 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Result : message::messageList
+2020-05-14 10:10:20.332  INFO 13704 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/messages/116/delete', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.MessageController.delete', args=[116, {}, {}]}
+2020-05-14 10:10:20.343  INFO 13704 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : redirect:/message
+2020-05-14 10:10:20.367  INFO 13704 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/message', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.MessageController.message', args=[]}
+2020-05-14 10:10:20.368  INFO 13704 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : message
+2020-05-14 10:10:20.582  INFO 13704 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 10:10:20.587  INFO 13704 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 10:10:20.635  INFO 13704 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/messagecomment', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.MessageController.messages', args=[{}]}
+2020-05-14 10:10:20.652  INFO 13704 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Result : message::messageList
+2020-05-14 10:12:49.545  INFO 13704 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2020-05-14 10:12:49.559  INFO 13704 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : index
+2020-05-14 10:12:49.809  INFO 13704 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 10:12:49.812  INFO 13704 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 10:13:13.548  INFO 13704 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[58, {}]}
+2020-05-14 10:13:13.573  INFO 13704 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Result : blog
+2020-05-14 10:13:14.348  INFO 13704 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 10:13:14.352  INFO 13704 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 10:13:14.663  INFO 13704 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/58', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[58, {}]}
+2020-05-14 10:13:14.676  INFO 13704 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-05-14 10:13:19.828  INFO 13704 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/1', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[1, {}]}
+2020-05-14 10:13:19.849  INFO 13704 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : blog
+2020-05-14 10:13:20.464  INFO 13704 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2020-05-14 10:13:20.469  INFO 13704 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Result : index :: blogMessage
+2020-05-14 10:13:20.611  INFO 13704 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/1', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[1, {}]}
+2020-05-14 10:13:20.617  INFO 13704 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-05-14 11:46:46.233  INFO 13172 --- [main] com.star.MyblogApplicationTests          : Starting MyblogApplicationTests on DESKTOP-5QO2IGL with PID 13172 (started by OneStar in E:\MyBlog\myblog)
+2020-05-14 11:46:46.235  INFO 13172 --- [main] com.star.MyblogApplicationTests          : The following profiles are active: pro
+2020-05-14 11:46:56.789  INFO 13172 --- [main] com.star.MyblogApplicationTests          : Started MyblogApplicationTests in 12.52 seconds (JVM running for 16.388)
+2020-05-14 14:56:49.924  INFO 15704 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on DESKTOP-5QO2IGL with PID 15704 (E:\MyBlog\myblog\target\classes started by OneStar in E:\MyBlog\myblog)
+2020-05-14 14:56:49.937  INFO 15704 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2020-05-14 14:56:54.895  INFO 15704 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 7.259 seconds (JVM running for 11.472)
+2020-05-14 14:57:06.290  INFO 15704 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2020-05-14 14:57:07.616 ERROR 15704 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:354)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:554)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at com.github.pagehelper.page.PageAutoDialect.getUrl(PageAutoDialect.java:177)
+	at com.github.pagehelper.page.PageAutoDialect.getDialect(PageAutoDialect.java:203)
+	at com.github.pagehelper.page.PageAutoDialect.initDelegateDialect(PageAutoDialect.java:99)
+	at com.github.pagehelper.PageHelper.skip(PageHelper.java:66)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:93)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy116.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy81.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy82.getFirstPageBlog(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy83.getFirstPageBlog(Unknown Source)
+	at com.star.service.Impl.BlogServiceImpl.getAllFirstPageBlog(BlogServiceImpl.java:66)
+	at com.star.controller.IndexController.index(IndexController.java:50)
+	at com.star.controller.IndexController$$FastClassBySpringCGLIB$$4b929c4b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.star.controller.IndexController$$EnhancerBySpringCGLIB$$167e48fd.index(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-05-14 14:57:07.703 ERROR 15704 --- [http-nio-8080-exec-1] c.s.hander.ControllerExceptionHandler    : Requst URL : http://localhost:8080/，Exception : {}
+
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.github.pagehelper.PageException: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+### Cause: com.github.pagehelper.PageException: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy81.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy82.getFirstPageBlog(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy83.getFirstPageBlog(Unknown Source)
+	at com.star.service.Impl.BlogServiceImpl.getAllFirstPageBlog(BlogServiceImpl.java:66)
+	at com.star.controller.IndexController.index(IndexController.java:50)
+	at com.star.controller.IndexController$$FastClassBySpringCGLIB$$4b929c4b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.star.controller.IndexController$$EnhancerBySpringCGLIB$$167e48fd.index(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.github.pagehelper.PageException: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+### Cause: com.github.pagehelper.PageException: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:149)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 89 common frames omitted
+Caused by: com.github.pagehelper.PageException: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.github.pagehelper.page.PageAutoDialect.getUrl(PageAutoDialect.java:180)
+	at com.github.pagehelper.page.PageAutoDialect.getDialect(PageAutoDialect.java:203)
+	at com.github.pagehelper.page.PageAutoDialect.initDelegateDialect(PageAutoDialect.java:99)
+	at com.github.pagehelper.PageHelper.skip(PageHelper.java:66)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:93)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy116.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	... 95 common frames omitted
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:354)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:554)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at com.github.pagehelper.page.PageAutoDialect.getUrl(PageAutoDialect.java:177)
+	... 102 common frames omitted
+
+2020-05-14 14:57:07.711  WARN 15704 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.github.pagehelper.PageException: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+### Cause: com.github.pagehelper.PageException: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)]
+2020-05-14 15:17:46.538  INFO 15724 --- [main] com.star.MyblogApplicationTests          : Starting MyblogApplicationTests on DESKTOP-5QO2IGL with PID 15724 (started by OneStar in E:\MyBlog\myblog)
+2020-05-14 15:17:46.540  INFO 15724 --- [main] com.star.MyblogApplicationTests          : The following profiles are active: pro
+2020-05-14 15:17:58.087  INFO 15724 --- [main] com.star.MyblogApplicationTests          : Started MyblogApplicationTests in 12.508 seconds (JVM running for 15.42)

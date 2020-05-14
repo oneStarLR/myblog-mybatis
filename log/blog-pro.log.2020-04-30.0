@@ -1,0 +1,214 @@
+2020-04-30 16:53:51.134  INFO 5928 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on DESKTOP-5QO2IGL with PID 5928 (E:\MyBlog\myblog\target\classes started by OneStar in E:\MyBlog\myblog)
+2020-04-30 16:53:51.143  INFO 5928 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2020-04-30 16:53:59.020  INFO 5928 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 10.169 seconds (JVM running for 14.633)
+2020-04-30 16:54:08.989  INFO 5928 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2020-04-30 16:54:09.402  INFO 5928 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index
+2020-04-30 16:54:12.399  INFO 5928 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:54:12.405  INFO 5928 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:54:23.671  INFO 5928 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/60', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[60, {}]}
+2020-04-30 16:54:23.787  INFO 5928 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Result : blog
+2020-04-30 16:54:26.168  INFO 5928 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:54:26.172  INFO 5928 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:54:27.011  INFO 5928 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/60', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[60, {}]}
+2020-04-30 16:54:27.052  INFO 5928 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-04-30 16:54:34.288  INFO 5928 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.post', args=[Comment{id=null, nickname='oneStar', email='onestarlr@hotmail.com', content='asda', avatar='null', createTime=null, blogId=60, parentCommentId=null, parentNickname='null', replyComments=[], parentComment=Comment{id=-1, nickname='null', email='null', content='null', avatar='null', createTime=null, blogId=null, parentCommentId=null, parentNickname='null', replyComments=[], parentComment=null, adminComment=false, blog=null}, adminComment=false, blog=null}, org.apache.catalina.session.StandardSessionFacade@64950da6, {comment=Comment{id=null, nickname='oneStar', email='onestarlr@hotmail.com', content='asda', avatar='null', createTime=null, blogId=60, parentCommentId=null, parentNickname='null', replyComments=[], parentComment=Comment{id=-1, nickname='null', email='null', content='null', avatar='null', createTime=null, blogId=null, parentCommentId=null, parentNickname='null', replyComments=[], parentComment=null, adminComment=false, blog=null}, adminComment=false, blog=null}, org.springframework.validation.BindingResult.comment=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-04-30 16:54:34.329  INFO 5928 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-04-30 16:54:49.355  INFO 5928 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.TypeShowController.types', args=[1, -1, {}]}
+2020-04-30 16:54:49.391  INFO 5928 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Result : types
+2020-04-30 16:54:50.727  INFO 5928 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:54:50.729  INFO 5928 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:55:20.106  INFO 5928 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/types/45', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.TypeShowController.types', args=[1, 45, {}]}
+2020-04-30 16:55:20.128  INFO 5928 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Result : types
+2020-04-30 16:55:20.903  INFO 5928 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:55:20.907  INFO 5928 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:55:25.878  INFO 5928 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/types/1', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.TypeShowController.types', args=[1, 1, {}]}
+2020-04-30 16:55:25.890  INFO 5928 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Result : types
+2020-04-30 16:55:26.105  INFO 5928 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:55:26.107  INFO 5928 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:55:28.478  INFO 5928 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.ArchiveShowController.archive', args=[{}]}
+2020-04-30 16:55:28.501  INFO 5928 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : archives
+2020-04-30 16:55:28.853  INFO 5928 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:55:28.856  INFO 5928 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:55:32.486  INFO 5928 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/music', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.MusicShowController.about', args=[]}
+2020-04-30 16:55:32.494  INFO 5928 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : music
+2020-04-30 16:55:35.511  INFO 5928 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/message', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.MessageController.message', args=[]}
+2020-04-30 16:55:35.516  INFO 5928 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : message
+2020-04-30 16:55:35.950  INFO 5928 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:55:36.051  INFO 5928 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/messagecomment', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.MessageController.messages', args=[{}]}
+2020-04-30 16:55:36.178  INFO 5928 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : message::messageList
+2020-04-30 16:55:36.251 ERROR 5928 --- [http-nio-8080-exec-3] c.s.hander.ControllerExceptionHandler    : Requst URL : http://localhost:8080/footer/newblog，Exception : {}
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 10000' at line 1
+### The error may exist in file [E:\MyBlog\myblog\target\classes\mapper\BlogDao.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select * from myblog.t_blog order by t_blog.update_time desc limit 3; LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 10000' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 10000' at line 1
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:235)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:88)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440)
+	at com.sun.proxy.$Proxy81.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy82.getNewBlog(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy83.getNewBlog(Unknown Source)
+	at com.star.service.Impl.BlogServiceImpl.getNewBlog(BlogServiceImpl.java:77)
+	at com.star.controller.IndexController.newblogs(IndexController.java:84)
+	at com.star.controller.IndexController$$FastClassBySpringCGLIB$$4b929c4b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.star.controller.IndexController$$EnhancerBySpringCGLIB$$e202d378.newblogs(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 10000' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.github.pagehelper.util.ExecutorUtil.pageQuery(ExecutorUtil.java:177)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:104)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy116.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	... 89 common frames omitted
+
+2020-04-30 16:55:36.266  WARN 5928 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 10000' at line 1
+### The error may exist in file [E:\MyBlog\myblog\target\classes\mapper\BlogDao.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select * from myblog.t_blog order by t_blog.update_time desc limit 3; LIMIT ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 10000' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 10000' at line 1]
+2020-04-30 16:55:36.385  INFO 5928 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:55:36.389  INFO 5928 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:55:45.620  INFO 5928 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/message', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.MessageController.post', args=[Message{id=null, nickname='oneStar', email='onestarlr@hotmail.com', content='测试', avatar='null', createTime=null, parentMessageId=null, adminMessage=false, replyMessages=[], parentMessage=Message{id=-1, nickname='null', email='null', content='null', avatar='null', createTime=null, parentMessageId=null, adminMessage=false, replyMessages=[], parentMessage=null, parentNickname='null'}, parentNickname='null'}, org.apache.catalina.session.StandardSessionFacade@64950da6, {message=Message{id=null, nickname='oneStar', email='onestarlr@hotmail.com', content='测试', avatar='null', createTime=null, parentMessageId=null, adminMessage=false, replyMessages=[], parentMessage=Message{id=-1, nickname='null', email='null', content='null', avatar='null', createTime=null, parentMessageId=null, adminMessage=false, replyMessages=[], parentMessage=null, parentNickname='null'}, parentNickname='null'}, org.springframework.validation.BindingResult.message=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-04-30 16:55:45.684  INFO 5928 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : message::messageList
+2020-04-30 16:55:47.317  INFO 5928 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/friends', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.FriendsShowController.friends', args=[{}]}
+2020-04-30 16:55:47.331  INFO 5928 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : friends
+2020-04-30 16:55:47.732  INFO 5928 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:55:47.734  INFO 5928 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:55:49.689  INFO 5928 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/picture', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.PictureShowController.friends', args=[{}]}
+2020-04-30 16:55:49.703  INFO 5928 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : picture
+2020-04-30 16:55:50.370  INFO 5928 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:55:50.373  INFO 5928 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:55:58.273  INFO 5928 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/about', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.AboutShowController.about', args=[]}
+2020-04-30 16:55:58.282  INFO 5928 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : about
+2020-04-30 16:55:58.927  INFO 5928 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:55:58.931  INFO 5928 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:56:05.787  INFO 5928 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:56:05.789  INFO 5928 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:56:07.928  INFO 5928 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:56:07.930  INFO 5928 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:56:12.246  INFO 5928 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:56:12.249  INFO 5928 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:56:17.897  INFO 5928 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:56:17.901  INFO 5928 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:56:33.707  INFO 5928 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:56:33.710  INFO 5928 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:56:36.259  INFO 5928 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:56:36.260  INFO 5928 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:56:38.310  INFO 5928 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:56:38.313  INFO 5928 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:56:40.886  INFO 5928 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:56:40.888  INFO 5928 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:56:44.962  INFO 5928 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:56:44.964  INFO 5928 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:56:46.765  INFO 5928 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:56:46.767  INFO 5928 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 16:56:47.949  INFO 5928 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-30 16:56:47.952  INFO 5928 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-30 17:38:43.259  WARN 5928 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m33s836ms987µs900ns).

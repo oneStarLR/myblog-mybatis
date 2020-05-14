@@ -1,0 +1,77 @@
+2020-04-19 10:46:33.509  INFO 7884 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on DESKTOP-5QO2IGL with PID 7884 (E:\MyBlog\myblog\target\classes started by OneStar in E:\MyBlog\myblog)
+2020-04-19 10:46:33.528  INFO 7884 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2020-04-19 10:46:38.775  INFO 7884 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 7.849 seconds (JVM running for 13.109)
+2020-04-19 10:46:47.720  INFO 7884 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2020-04-19 10:46:48.202  INFO 7884 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index
+2020-04-19 10:46:49.719  INFO 7884 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-19 10:46:49.734  INFO 7884 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-19 10:46:51.383  INFO 7884 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/message', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.MessageController.message', args=[]}
+2020-04-19 10:46:51.393  INFO 7884 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : message
+2020-04-19 10:46:51.720  INFO 7884 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-19 10:46:51.727  INFO 7884 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-19 10:46:57.267  INFO 7884 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/message', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.MessageController.message', args=[]}
+2020-04-19 10:46:57.268  INFO 7884 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : message
+2020-04-19 10:46:57.658  INFO 7884 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-19 10:46:57.667  INFO 7884 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-19 10:47:13.657  INFO 7884 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/message', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.MessageController.post', args=[Message{id=null, nickname='oneStar', email='onestarlr@hotmail.com', content='没有嘛', avatar='null', createTime=null, parentMessageId=null, adminMessage=false, replyMessages=[], parentMessage=Message{id=-1, nickname='null', email='null', content='null', avatar='null', createTime=null, parentMessageId=null, adminMessage=false, replyMessages=[], parentMessage=null, parentNickname='null'}, parentNickname='null'}, org.apache.catalina.session.StandardSessionFacade@3ce12ba0]}
+2020-04-19 10:47:13.688  INFO 7884 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : redirect:/https://onestar.newstar.net.cn/message
+2020-04-19 10:47:13.713  INFO 7884 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/https://onestar.newstar.net.cn/message;jsessionid=0E2EA237BDCB2D20A9F31EADCBAE892A', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.MessageController.messages', args=[{}]}
+2020-04-19 10:47:13.794  INFO 7884 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : message::messageList
+2020-04-19 10:49:07.515  INFO 7884 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2020-04-19 10:49:07.531  INFO 7884 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : index
+2020-04-19 10:49:07.857  INFO 7884 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-19 10:49:07.859  INFO 7884 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-19 10:49:12.345  INFO 7884 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/message', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.MessageController.message', args=[]}
+2020-04-19 10:49:12.348  INFO 7884 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : message
+2020-04-19 10:49:12.540  INFO 7884 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-19 10:49:12.542  INFO 7884 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-19 10:51:26.869  INFO 12552 --- [main] com.star.MyblogApplicationTests          : Starting MyblogApplicationTests on DESKTOP-5QO2IGL with PID 12552 (started by OneStar in E:\MyBlog\myblog)
+2020-04-19 10:51:26.871  INFO 12552 --- [main] com.star.MyblogApplicationTests          : The following profiles are active: pro
+2020-04-19 10:51:35.783  INFO 12552 --- [main] com.star.MyblogApplicationTests          : Started MyblogApplicationTests in 9.709 seconds (JVM running for 12.334)
+2020-04-19 11:14:58.940  INFO 10212 --- [main] com.star.MyblogApplicationTests          : Starting MyblogApplicationTests on DESKTOP-5QO2IGL with PID 10212 (started by OneStar in E:\MyBlog\myblog)
+2020-04-19 11:14:58.952  INFO 10212 --- [main] com.star.MyblogApplicationTests          : The following profiles are active: pro
+2020-04-19 11:15:16.889  INFO 10212 --- [main] com.star.MyblogApplicationTests          : Started MyblogApplicationTests in 20.385 seconds (JVM running for 24.107)
+2020-04-19 11:25:47.537  INFO 1068 --- [main] com.star.MyblogApplicationTests          : Starting MyblogApplicationTests on DESKTOP-5QO2IGL with PID 1068 (started by OneStar in E:\MyBlog\myblog)
+2020-04-19 11:25:47.539  INFO 1068 --- [main] com.star.MyblogApplicationTests          : The following profiles are active: pro
+2020-04-19 11:25:58.161  INFO 1068 --- [main] com.star.MyblogApplicationTests          : Started MyblogApplicationTests in 11.383 seconds (JVM running for 14.172)
+2020-04-19 11:29:54.597  INFO 5412 --- [main] com.star.MyblogApplicationTests          : Starting MyblogApplicationTests on DESKTOP-5QO2IGL with PID 5412 (started by OneStar in E:\MyBlog\myblog)
+2020-04-19 11:29:54.598  INFO 5412 --- [main] com.star.MyblogApplicationTests          : The following profiles are active: pro
+2020-04-19 11:30:02.507  INFO 5412 --- [main] com.star.MyblogApplicationTests          : Started MyblogApplicationTests in 9.564 seconds (JVM running for 11.319)
+2020-04-19 13:59:07.251  INFO 14584 --- [main] com.star.MyblogApplicationTests          : Starting MyblogApplicationTests on DESKTOP-5QO2IGL with PID 14584 (started by OneStar in E:\MyBlog\myblog)
+2020-04-19 13:59:07.269  INFO 14584 --- [main] com.star.MyblogApplicationTests          : The following profiles are active: pro
+2020-04-19 13:59:18.474  INFO 14584 --- [main] com.star.MyblogApplicationTests          : Started MyblogApplicationTests in 12.212 seconds (JVM running for 15.093)
+2020-04-19 14:12:53.118  INFO 7496 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on DESKTOP-5QO2IGL with PID 7496 (E:\MyBlog\myblog\target\classes started by OneStar in E:\MyBlog\myblog)
+2020-04-19 14:12:53.196  INFO 7496 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2020-04-19 14:13:00.220  INFO 7496 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 11.074 seconds (JVM running for 16.919)
+2020-04-19 14:13:25.474  INFO 7496 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2020-04-19 14:13:27.338  INFO 7496 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Result : index
+2020-04-19 14:13:30.185  INFO 7496 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-19 14:13:30.190  INFO 7496 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-19 14:13:43.402  INFO 7496 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-19 14:13:43.415  INFO 7496 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-19 14:18:54.823  INFO 10340 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on DESKTOP-5QO2IGL with PID 10340 (E:\MyBlog\myblog\target\classes started by OneStar in E:\MyBlog\myblog)
+2020-04-19 14:18:54.828  INFO 10340 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2020-04-19 14:19:03.342  INFO 10340 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 10.708 seconds (JVM running for 15.533)
+2020-04-19 14:19:41.290  INFO 10340 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-19 14:19:41.311  INFO 10340 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-19 14:20:21.288  INFO 10340 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-19 14:20:21.292  INFO 10340 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-19 14:20:32.699  INFO 10340 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-19 14:20:32.706  INFO 10340 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-19 14:20:38.219  INFO 10340 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-19 14:20:38.225  INFO 10340 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-19 14:20:41.832  INFO 10340 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-19 14:20:41.837  INFO 10340 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-19 14:22:44.478  INFO 5692 --- [main] com.star.MyblogApplicationTests          : Starting MyblogApplicationTests on DESKTOP-5QO2IGL with PID 5692 (started by OneStar in E:\MyBlog\myblog)
+2020-04-19 14:22:44.480  INFO 5692 --- [main] com.star.MyblogApplicationTests          : The following profiles are active: pro
+2020-04-19 14:22:58.453  INFO 5692 --- [main] com.star.MyblogApplicationTests          : Started MyblogApplicationTests in 14.94 seconds (JVM running for 19.017)
+2020-04-19 15:12:49.286  INFO 3068 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on DESKTOP-5QO2IGL with PID 3068 (E:\MyBlog\myblog\target\classes started by OneStar in E:\MyBlog\myblog)
+2020-04-19 15:12:49.362  INFO 3068 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2020-04-19 15:12:59.963  INFO 3068 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 12.952 seconds (JVM running for 23.057)
+2020-04-19 15:13:10.056  INFO 3068 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-19 15:13:10.131  INFO 3068 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-19 15:13:13.611  INFO 3068 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-19 15:13:13.615  INFO 3068 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-19 15:14:13.456  INFO 1140 --- [main] com.star.MyblogApplicationTests          : Starting MyblogApplicationTests on DESKTOP-5QO2IGL with PID 1140 (started by OneStar in E:\MyBlog\myblog)
+2020-04-19 15:14:13.458  INFO 1140 --- [main] com.star.MyblogApplicationTests          : The following profiles are active: pro
+2020-04-19 15:14:34.276  INFO 1140 --- [main] com.star.MyblogApplicationTests          : Started MyblogApplicationTests in 23.079 seconds (JVM running for 27.39)

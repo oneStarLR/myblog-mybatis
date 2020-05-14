@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.star.dao.FriendLinkDao">
+
+    <!--查询所有友链-->
+    <select id="listFriendLink" resultType="com.star.entity.FriendLink">
+        select * from myblog.t_friend order by t_friend.create_time desc
+    </select>
+
+    <!--添加友链-->
+    <insert id="saveFriendLink" parameterType="com.star.entity.FriendLink">
+        insert into myblog.t_friend (blogname,blogaddress,pictureaddress,create_time)
+        values (#{blogname},#{blogaddress},#{pictureaddress},#{createTime})
+    </insert>
+
+    <!--根据id查询友链-->
+    <select id="getFriendLink" resultType="com.star.entity.FriendLink">
+        select * from myblog.t_friend f where f.id = #{id}
+    </select>
+
+    <!--根据网址查询友链-->
+    <select id="getFriendLinkByBlogaddress" resultType="com.star.entity.FriendLink">
+        select * from myblog.t_friend f where f.blogaddress = #{blogaddress}
+    </select>
+
+    <!--编辑修改友链-->
+    <update id="updateFriendLink" parameterType="com.star.entity.FriendLink">
+        update myblog.t_friend set blogname = #{blogname}, blogaddress = #{blogaddress}, pictureaddress = #{pictureaddress} where id = #{id};
+    </update>
+
+    <!--删除友链-->
+    <delete id="deleteFriendLink" >
+        delete from myblog.t_friend where id = #{id}
+    </delete>
+
+</mapper>

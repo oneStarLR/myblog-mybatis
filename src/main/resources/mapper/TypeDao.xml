@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.star.dao.TypeDao">
+
+    <!--新增保存分类-->
+    <insert id="saveType" parameterType="com.star.entity.Type">
+        insert into myblog.t_type values (#{id},#{name});
+    </insert>
+
+    <!--根据id，name查询分类-->
+    <select id="getType" resultType="com.star.entity.Type">
+        select id,name from myblog.t_type where id = #{id}
+    </select>
+
+    <!--查询所有分类-->
+    <select id="getAllType" resultType="com.star.entity.Type">
+        select * from myblog.t_type
+    </select>
+
+
+    <resultMap id="type" type="com.star.entity.Type">
+        <id property="id" column="tid"/>
+        <result property="name" column="name"/>
+        <collection property="blogs" ofType="com.star.entity.Blog">
+            <id property="id" column="bid"/>
+            <result property="title" column="title"/>
+            <result property="typeId" column="type_id"/>
+        </collection>
+    </resultMap>
+
+    <!--分类页面查询-->
+    <select id="getAllTypeAndBlog" resultMap="type">
+        select t.id tid, t.name, b.id bid, b.title,b.type_id from myblog.t_type t,myblog.t_blog b where t.id = b.type_id
+    </select>
+
+
+
+    <!--根据分类名称来查询-->
+    <select id="getTypeByName" resultType="com.star.entity.Type">
+        select * from myblog.t_type where name = #{name}
+    </select>
+
+    <!--编辑修改分类-->
+    <update id="updateType" parameterType="com.star.entity.Type">
+        update myblog.t_type set name = #{name} where id = #{id};
+    </update>
+
+    <!--删除分类-->
+    <delete id="deleteType" >
+        delete from myblog.t_type where id = #{id}
+    </delete>
+
+</mapper>

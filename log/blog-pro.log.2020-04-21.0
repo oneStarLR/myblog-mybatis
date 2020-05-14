@@ -1,0 +1,299 @@
+2020-04-21 09:20:32.968  INFO 13788 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on DESKTOP-5QO2IGL with PID 13788 (E:\MyBlog\myblog\target\classes started by OneStar in E:\MyBlog\myblog)
+2020-04-21 09:20:33.048  INFO 13788 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2020-04-21 09:20:46.037  INFO 13788 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 15.152 seconds (JVM running for 21.118)
+2020-04-21 09:21:38.946  INFO 13788 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2020-04-21 09:21:39.415  INFO 13788 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index
+2020-04-21 09:21:40.842  INFO 13788 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-21 09:21:40.842  INFO 13788 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-21 09:22:19.112  INFO 13788 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-21 09:22:19.123  INFO 13788 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-21 09:22:22.704  INFO 13788 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2020-04-21 09:22:22.728  INFO 13788 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Result : index
+2020-04-21 09:22:23.179  INFO 13788 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-21 09:22:23.183  INFO 13788 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-21 09:22:25.338  INFO 13788 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/60', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[60, {}]}
+2020-04-21 09:22:25.428  INFO 13788 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : blog
+2020-04-21 09:22:26.584  INFO 13788 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-21 09:22:26.587  INFO 13788 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-21 09:22:27.088  INFO 13788 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/60', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[60, {}]}
+2020-04-21 09:22:27.120  INFO 13788 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-04-21 09:22:30.796  INFO 13788 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comment/60/24/delete', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.delete', args=[60, 24, {}, {}]}
+2020-04-21 09:22:30.836  INFO 13788 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : /comments/60
+2020-04-21 09:22:30.843 ERROR 13788 --- [http-nio-8080-exec-10] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-10] Exception processing template "/comments/60": Error resolving template [/comments/60], template might not exist or might not be accessible by any of the configured Template Resolvers
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [/comments/60], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-04-21 09:22:30.854 ERROR 13788 --- [http-nio-8080-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [/comments/60], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [/comments/60], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-04-21 09:22:31.262  INFO 13788 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-21 09:22:31.267  INFO 13788 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-21 09:25:42.079  INFO 13788 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on DESKTOP-5QO2IGL with PID 13788 (E:\MyBlog\myblog\target\classes started by OneStar in E:\MyBlog\myblog)
+2020-04-21 09:25:42.080  INFO 13788 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2020-04-21 09:25:44.086  INFO 13788 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 2.09 seconds (JVM running for 319.179)
+2020-04-21 09:25:55.989  INFO 13788 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2020-04-21 09:25:56.168  INFO 13788 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : index
+2020-04-21 09:25:56.613  INFO 13788 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-21 09:25:56.616  INFO 13788 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-21 09:26:06.411  INFO 13788 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-21 09:26:06.416  INFO 13788 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-21 09:26:10.349  INFO 13788 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2020-04-21 09:26:10.363  INFO 13788 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : index
+2020-04-21 09:26:10.670  INFO 13788 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-21 09:26:10.673  INFO 13788 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-21 09:26:12.550  INFO 13788 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/60', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[60, {}]}
+2020-04-21 09:26:12.577  INFO 13788 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : blog
+2020-04-21 09:26:13.251  INFO 13788 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-21 09:26:13.253  INFO 13788 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-21 09:26:13.522  INFO 13788 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/60', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[60, {}]}
+2020-04-21 09:26:13.558  INFO 13788 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-04-21 09:26:18.454  INFO 13788 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comment/60/24/delete', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.delete', args=[60, 24, {}, {}]}
+2020-04-21 09:26:18.497  INFO 13788 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : blog60
+2020-04-21 09:26:18.501 ERROR 13788 --- [http-nio-8080-exec-6] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-6] Exception processing template "blog60": Error resolving template [blog60], template might not exist or might not be accessible by any of the configured Template Resolvers
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [blog60], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-04-21 09:26:18.504 ERROR 13788 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [blog60], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [blog60], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-04-21 09:26:18.838  INFO 13788 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-21 09:26:18.845  INFO 13788 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-21 09:28:03.124  INFO 13788 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on DESKTOP-5QO2IGL with PID 13788 (E:\MyBlog\myblog\target\classes started by OneStar in E:\MyBlog\myblog)
+2020-04-21 09:28:03.124  INFO 13788 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2020-04-21 09:28:04.696  INFO 13788 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 1.641 seconds (JVM running for 459.786)
+2020-04-21 09:28:45.973  INFO 13788 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2020-04-21 09:28:46.017  INFO 13788 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index
+2020-04-21 09:28:46.493  INFO 13788 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-21 09:28:46.501  INFO 13788 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-21 09:28:54.788  INFO 13788 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-21 09:28:54.796  INFO 13788 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-21 09:28:58.552  INFO 13788 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2020-04-21 09:28:58.570  INFO 13788 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : index
+2020-04-21 09:28:58.841  INFO 13788 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-21 09:28:58.845  INFO 13788 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-21 09:29:01.169  INFO 13788 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/60', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[60, {}]}
+2020-04-21 09:29:01.199  INFO 13788 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : blog
+2020-04-21 09:29:01.829  INFO 13788 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-21 09:29:01.832  INFO 13788 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-21 09:29:02.018  INFO 13788 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/60', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[60, {}]}
+2020-04-21 09:29:02.047  INFO 13788 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-04-21 09:29:05.141  INFO 13788 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comment/60/24/delete', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.delete', args=[60, 24, {}, {}]}
+2020-04-21 09:29:05.168  INFO 13788 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-04-21 09:29:22.894  INFO 13788 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.post', args=[Comment{id=null, nickname='ONESTAR', email='onestarlr@hotmail.com', content='增加', avatar='null', createTime=null, blogId=60, parentCommentId=null, parentNickname='null', replyComments=[], parentComment=Comment{id=-1, nickname='null', email='null', content='null', avatar='null', createTime=null, blogId=null, parentCommentId=null, parentNickname='null', replyComments=[], parentComment=null, adminComment=false, blog=null}, adminComment=false, blog=null}, org.apache.catalina.session.StandardSessionFacade@3046f874, {comment=Comment{id=null, nickname='ONESTAR', email='onestarlr@hotmail.com', content='增加', avatar='null', createTime=null, blogId=60, parentCommentId=null, parentNickname='null', replyComments=[], parentComment=Comment{id=-1, nickname='null', email='null', content='null', avatar='null', createTime=null, blogId=null, parentCommentId=null, parentNickname='null', replyComments=[], parentComment=null, adminComment=false, blog=null}, adminComment=false, blog=null}, org.springframework.validation.BindingResult.comment=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-04-21 09:29:22.935  INFO 13788 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-04-21 09:29:48.000  INFO 13788 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comment/60/25/delete', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.delete', args=[60, 25, {}, {}]}
+2020-04-21 09:29:48.031  INFO 13788 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-04-21 09:55:28.209  INFO 13788 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2020-04-21 09:55:28.224  INFO 13788 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Result : index
+2020-04-21 09:55:28.940  INFO 13788 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-21 09:55:28.942  INFO 13788 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-21 09:55:35.703  INFO 13788 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-21 09:55:35.705  INFO 13788 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-21 09:55:39.026  INFO 13788 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2020-04-21 09:55:39.040  INFO 13788 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : index
+2020-04-21 09:55:39.367  INFO 13788 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-21 09:55:39.375  INFO 13788 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-21 09:55:50.490  INFO 13788 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/60', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blog', args=[60, {}]}
+2020-04-21 09:55:50.513  INFO 13788 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : blog
+2020-04-21 09:55:51.263  INFO 13788 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-21 09:55:51.265  INFO 13788 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : index :: newblogList
+2020-04-21 09:55:51.488  INFO 13788 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments/60', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.comments', args=[60, {}]}
+2020-04-21 09:55:51.500  INFO 13788 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-04-21 09:55:54.772  INFO 13788 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/comments', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.CommentController.post', args=[Comment{id=null, nickname='ONESTAR', email='onestarlr@hotmail.com', content='afsdfasd', avatar='null', createTime=null, blogId=60, parentCommentId=null, parentNickname='null', replyComments=[], parentComment=Comment{id=-1, nickname='null', email='null', content='null', avatar='null', createTime=null, blogId=null, parentCommentId=null, parentNickname='null', replyComments=[], parentComment=null, adminComment=false, blog=null}, adminComment=false, blog=null}, org.apache.catalina.session.StandardSessionFacade@3046f874, {comment=Comment{id=null, nickname='ONESTAR', email='onestarlr@hotmail.com', content='afsdfasd', avatar='null', createTime=null, blogId=60, parentCommentId=null, parentNickname='null', replyComments=[], parentComment=Comment{id=-1, nickname='null', email='null', content='null', avatar='null', createTime=null, blogId=null, parentCommentId=null, parentNickname='null', replyComments=[], parentComment=null, adminComment=false, blog=null}, adminComment=false, blog=null}, org.springframework.validation.BindingResult.comment=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]}
+2020-04-21 09:55:54.801  INFO 13788 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : blog :: commentList
+2020-04-21 10:00:35.600  INFO 13788 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.newblogs', args=[{}]}
+2020-04-21 10:00:35.608  INFO 13788 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : index :: newblogList

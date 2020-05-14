@@ -1,0 +1,461 @@
+/* ############ icomoon icon fonts CSS ############ */
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('icomoon.eot?-qkv88o');
+	src:url('icomoon.eot?#iefix-qkv88o') format('embedded-opentype'),
+		url('icomoon.ttf?-qkv88o') format('truetype'),
+		url('icomoon.woff?-qkv88o') format('woff'),
+		url('icomoon.svg?-qkv88o#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-spinner:before {
+	content: "\e600";
+}
+.icon-cancel-circle:before {
+	content: "\e604";
+}
+.icon-cross:before {
+	content: "\e601";
+}
+.icon-arrow-left:before {
+	content: "\e602";
+}
+.icon-arrow-right:before {
+	content: "\e603";
+}
+
+/* ############ Start of responsive gallery CSS ############ */
+
+
+div.rthumbnail{ /* style for thumbsnail DIVs that appear initially on the page */
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+div.rthumbnail div.rcaption{
+	display: none;
+}
+
+div.responsivegallery{ /* style for responsive gallery UI */
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: fixed;
+	display: none;
+	z-index: 1000;
+}
+
+div.responsivegallery:before{ /* gallery overlay */
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	cursor: zoom-out;
+	top: 0;
+	left: 0;
+	background: black;
+	opacity: 0.8;
+	z-index: -1;
+}
+
+div.responsivegallery div.galleryinner{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 85%;
+	margin-top: 100px;
+	text-align: center;
+    vertical-align: middle;
+	white-space: nowrap;
+
+
+}
+
+div.responsivegallery div.galleryinner:before{ /* technique to vertical align elements */
+  content: '';
+  display: inline-block;
+  height: 90%;
+  vertical-align: middle;
+}
+
+div.responsivegallery div.figurearea{
+	position: relative;
+	max-width: 100%;
+	vertical-align: middle;
+	display: inline-block;
+	z-index: 1000;
+}
+
+div.responsivegallery div.figurearea.isvideo{
+	width: 90%;
+}
+
+/* video container CSS */
+
+.jkvideocontainer *{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+
+.jkvideowrapper{
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 ratio. See https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+	height: 0;
+}
+
+
+.jkvideowrapper iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+/* figure CSS */
+
+div.responsivegallery figure{
+
+	margin: 0 auto;
+	padding: 0;
+	display: block;
+	box-shadow: 0 0 15px rgba(0,0,0,.6);
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+div.responsivegallery figure img{
+	height: auto;
+	border: 0;
+	line-height: 0;
+	display: block;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  user-select: none; 
+}
+
+/* Caption CSS */
+
+div.responsivegallery div.figurearea .thecaption{
+	text-align: left;
+	position: absolute;
+	bottom: 0;
+	font-size: 1.1em;
+	padding: 5px;
+	width: 100%;
+	white-space: normal;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+div.responsivegallery div.figurearea.isvideo .thecaption{
+	position: relative;	
+}
+
+div.responsivegallery div.figurearea .thecaption:before{ /* caption overlay */
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	background: black;
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+}
+
+div.responsivegallery div.figurearea .thecaption div.captioninner{
+	position: relative;
+	padding: 3px;
+	color: #ffffff;
+	font-family: _GB2312 FangSong_GB2312;
+	overflow: hidden;
+}
+
+div.responsivegallery div.figurearea .thecaption div.captioninner span.counter{
+	float: right;
+	font-size: 0.9em;
+	font-weight: bold;
+	display: block;
+	height: 100%;
+	line-height: 100%;
+	background: #2D2D2D;
+	color: white;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	box-shadow: 0 0 3px gray;
+}
+
+div.responsivegallery div.close{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	padding: 5px;
+	width: 55px;
+	height: 55px;
+	border-radius: 55px;
+	background: black;
+	color: white;
+	font-size: 35px;
+	z-index: 1000;
+	box-shadow: 0 0 5px rgba(0,0,0,.6);
+	cursor: pointer;
+	-webkit-transition: background 0.3s;
+	-moz-transition: background 0.3s;
+	transition: background 0.3s;
+}
+
+div.responsivegallery div.close:hover{
+	background: darkred;
+}
+
+div.responsivegallery div.close span{
+	line-height: 55px;
+}
+
+div.responsivegallery div.leftnav,
+div.responsivegallery div.rightnav{
+	position: absolute;
+	left: 5px;
+	top: 50%;
+	width: 50px;
+	height: 50px;
+	color: black;
+	background: white;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 55px;
+	margin-top: -25px;
+	cursor: pointer;
+	z-index: 1000;
+	font-size: 50px;
+}
+
+div.responsivegallery div.rightnav{
+	right: 5px;
+	left:auto;
+}
+
+
+div.responsivegallery div.loadingdiv,
+div.responsivegallery div.errordiv{
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+	position: absolute;
+	display: none;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -50px;
+	opacity: 0.6;
+	text-align: center;
+	z-index: 1000;
+	background: black;
+}
+
+div.responsivegallery div.loadingdiv span,
+div.responsivegallery div.errordiv span{
+	vertical-align: middle;
+	color: red;
+	font-size: 3em;
+	line-height: 90px;
+}
+
+div.responsivegallery div.loadingdiv span{ /* rotating loading DIV */
+	-webkit-animation: rotate 2s linear infinite;
+	animation: rotate 2s linear infinite;
+	font-size: 3.5em;
+	color: white;
+	display: inline-block;
+}
+
+@-webkit-keyframes rotate{
+	0%{
+		-webkit-transform: rotate(0deg);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes rotate{
+	0%{
+			transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+
+div.responsivegallery div.leftnav:hover,
+div.responsivegallery div.rightnav:hover{
+	background: white;
+	color: black;
+}
+
+
+@media screen and (max-width: 480px){ /* CSS when screen width is 480px or less */
+	div.responsivegallery div.leftnav,
+	div.responsivegallery div.rightnav{
+		width: 40px;
+		height: 40px;
+		color: black;
+		border-radius: 40px;
+		text-align: center;
+		line-height: 45px;
+		margin-top: -20px;
+		font-size: 40px;
+	}
+}
+
+
+
+
+
+
+
+
+
+#picture-main {
+	-moz-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -moz-filter 0.5s ease;
+	-webkit-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -webkit-filter 0.5s ease;
+	-ms-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -ms-filter 0.5s ease;
+	transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, filter 0.5s ease;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-moz-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+
+#picture-main .thumb {
+	-moz-transition: opacity 1.25s ease-in-out;
+	-webkit-transition: opacity 1.25s ease-in-out;
+	-ms-transition: opacity 1.25s ease-in-out;
+	transition: opacity 1.25s ease-in-out;
+	pointer-events: auto;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	opacity: 1;
+	overflow: hidden;
+	position: relative;
+}
+
+
+#picture-main .thumb {
+	-moz-transition-delay: 2.525s;
+	-webkit-transition-delay: 2.525s;
+	-ms-transition-delay: 2.525s;
+	transition-delay: 2.525s;
+	height: calc(40vh - 2em);
+	min-height: 20em;
+	width: 25%;
+}
+
+
+@media screen and (max-width: 1680px) {
+	#picture-main .thumb {
+		-moz-transition-delay: 2.075s;
+		-webkit-transition-delay: 2.075s;
+		-ms-transition-delay: 2.075s;
+		transition-delay: 2.075s;
+		height: calc(40vh - 2em);
+		min-height: 20em;
+		width: 33.33333%;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	#picture-main .thumb {
+		-moz-transition-delay: 1.625s;
+		-webkit-transition-delay: 1.625s;
+		-ms-transition-delay: 1.625s;
+		transition-delay: 1.625s;
+		height: calc(40vh - 2em);
+		min-height: 20em;
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	#picture-main .thumb {
+		-moz-transition-delay: 2.075s;
+		-webkit-transition-delay: 2.075s;
+		-ms-transition-delay: 2.075s;
+		transition-delay: 2.075s;
+		height: calc(28.57143vh - 1.33333em);
+		min-height: 18em;
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#main .thumb {
+		-moz-transition-delay: 1.175s;
+		-webkit-transition-delay: 1.175s;
+		-ms-transition-delay: 1.175s;
+		transition-delay: 1.175s;
+		height: calc(40vh - 2em);
+		min-height: 18em;
+		width: 100%;
+	}
+}
+
+.picture-zmki_px{
+	border: 0;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	object-fit: cover;
+	cursor: pointer;
+	outline: 0px;
+	background-image: url(https://a-oss.zmki.cn/2020/20200212-fcf30f3d33625.gif);
+	background-size: 100% 100%;
+}
+
+
+
+
+
