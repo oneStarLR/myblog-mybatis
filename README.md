@@ -3,6 +3,8 @@
 
 博客地址：https://onestar.newstar.net.cn/
 
+**使用该源码希望能够注明原博客以及源码出处，并禁止商用，谢谢！**
+
 
 > 本文将从技术栈、功能需求、数据库设计来讲述，前端页面展示可以看我上一篇文章[：【SpringBoot搭建个人博客】- 前端页面展示（一）](https://onestar.newstar.net.cn/blog/37)
 
