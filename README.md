@@ -7,31 +7,31 @@
 
 ### 一、开发文档
 
-[【SpringBoot搭建个人博客】- 前端页面展示（一）](https://onestar.newstar.net.cn/blog/37)
+1、[【SpringBoot搭建个人博客】- 前端页面展示（一）](https://onestar.newstar.net.cn/blog/37)
 
-[【SpringBoot搭建个人博客】- 技术需求（二）](https://onestar.newstar.net.cn/blog/38)
+2、[【SpringBoot搭建个人博客】- 技术需求（二）](https://onestar.newstar.net.cn/blog/38)
 
-[【SpringBoot搭建个人博客】- 框架搭建（三）](https://onestar.newstar.net.cn/blog/41)
+3、[【SpringBoot搭建个人博客】- 框架搭建（三）](https://onestar.newstar.net.cn/blog/41)
 
-[【SpringBoot搭建个人博客】- 后台登录（四）](https://onestar.newstar.net.cn/blog/42)
+4、[【SpringBoot搭建个人博客】- 后台登录（四）](https://onestar.newstar.net.cn/blog/42)
 
-[【SpringBoot搭建个人博客】- 实体类构建（五）](https://onestar.newstar.net.cn/blog/43)
+5、[【SpringBoot搭建个人博客】- 实体类构建（五）](https://onestar.newstar.net.cn/blog/43)
 
-[【SpringBoot搭建个人博客】- 分类管理（六）](https://onestar.newstar.net.cn/blog/44)
+6、[【SpringBoot搭建个人博客】- 分类管理（六）](https://onestar.newstar.net.cn/blog/44)
 
-[【SpringBoot搭建个人博客】- 博客管理（七）](https://onestar.newstar.net.cn/blog/46)
+7、[【SpringBoot搭建个人博客】- 博客管理（七）](https://onestar.newstar.net.cn/blog/46)
 
-[【SpringBoot搭建个人博客】- 友链管理（八）](https://onestar.newstar.net.cn/blog/47)
+8、[【SpringBoot搭建个人博客】- 友链管理（八）](https://onestar.newstar.net.cn/blog/47)
 
-[【SpringBoot搭建个人博客】- 相册管理（九）](https://onestar.newstar.net.cn/blog/48)
+9、[【SpringBoot搭建个人博客】- 相册管理（九）](https://onestar.newstar.net.cn/blog/48)
 
-[【SpringBoot搭建个人博客】- 博客首页显示（十）](https://onestar.newstar.net.cn/blog/49)
+10、[【SpringBoot搭建个人博客】- 博客首页显示（十）](https://onestar.newstar.net.cn/blog/49)
 
-[【SpringBoot搭建个人博客】- 博客详情页面显示（十一）](https://onestar.newstar.net.cn/blog/50)
+11、[【SpringBoot搭建个人博客】- 博客详情页面显示（十一）](https://onestar.newstar.net.cn/blog/50)
 
-[【SpringBoot搭建个人博客】- 其他页面显示（十二）](https://onestar.newstar.net.cn/blog/51)
+12、[【SpringBoot搭建个人博客】- 其他页面显示（十二）](https://onestar.newstar.net.cn/blog/51)
 
-[【SpringBoot搭建个人博客】- 线上部署（十三）](https://onestar.newstar.net.cn/blog/52)
+13、[【SpringBoot搭建个人博客】- 线上部署（十三）](https://onestar.newstar.net.cn/blog/52)
 
 ### 二、技术栈
 #### 1.前端
@@ -315,6 +315,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 ```
 欢迎关注公众号：
+
 ![oneStar](https://images.newstar.net.cn/img/oneStar.jpg)
 
 博客地址：https://onestar.newstar.net.cn/
