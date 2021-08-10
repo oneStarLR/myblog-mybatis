@@ -8,29 +8,17 @@
 ### 一、开发文档
 
 1、[【SpringBoot搭建个人博客】- 前端页面展示（一）](https://onestar.newstar.net.cn/blog/37)
-
 2、[【SpringBoot搭建个人博客】- 技术需求（二）](https://onestar.newstar.net.cn/blog/38)
-
 3、[【SpringBoot搭建个人博客】- 框架搭建（三）](https://onestar.newstar.net.cn/blog/41)
-
 4、[【SpringBoot搭建个人博客】- 后台登录（四）](https://onestar.newstar.net.cn/blog/42)
-
 5、[【SpringBoot搭建个人博客】- 实体类构建（五）](https://onestar.newstar.net.cn/blog/43)
-
 6、[【SpringBoot搭建个人博客】- 分类管理（六）](https://onestar.newstar.net.cn/blog/44)
-
 7、[【SpringBoot搭建个人博客】- 博客管理（七）](https://onestar.newstar.net.cn/blog/46)
-
 8、[【SpringBoot搭建个人博客】- 友链管理（八）](https://onestar.newstar.net.cn/blog/47)
-
 9、[【SpringBoot搭建个人博客】- 相册管理（九）](https://onestar.newstar.net.cn/blog/48)
-
 10、[【SpringBoot搭建个人博客】- 博客首页显示（十）](https://onestar.newstar.net.cn/blog/49)
-
 11、[【SpringBoot搭建个人博客】- 博客详情页面显示（十一）](https://onestar.newstar.net.cn/blog/50)
-
 12、[【SpringBoot搭建个人博客】- 其他页面显示（十二）](https://onestar.newstar.net.cn/blog/51)
-
 13、[【SpringBoot搭建个人博客】- 线上部署（十三）](https://onestar.newstar.net.cn/blog/52)
 
 ### 二、技术栈
