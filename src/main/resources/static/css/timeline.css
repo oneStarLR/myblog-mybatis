@@ -27,19 +27,19 @@
 }
 .timeline ul li div {
   position: relative;
-  bottom: 0;
+  /*bottom: 0;*/
   width:400px;
-  padding: 20px;
+  padding: 100px;
   background: #fff;
   box-shadow: 4px 13px 30px 1px rgba(1, 0, 56, 0.1);
   border-radius: 5px;
-  display: flex;
+  /*display: flex;*/
   align-items: center;
 }
 .timeline ul li div time {
   position: absolute;
   background: #f5af10;
-  width: 100px;
+  width: 250px;
   height: 20px;
   top: -15px;
   border-radius: 5px;

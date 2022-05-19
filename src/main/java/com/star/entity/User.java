@@ -4,8 +4,8 @@ import java.util.Date;
 
 /**
  * @Description: 用户实体类
+ * @Date: Created in 21:39 2020/5/26
  * @Author: ONESTAR
- * @Date: Created in 9:18 2020/3/26
  * @QQ群: 530311074
  * @URL: https://onestar.newstar.net.cn/
  */

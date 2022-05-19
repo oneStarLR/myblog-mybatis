@@ -5,22 +5,23 @@ import com.star.entity.Comment;
 import java.util.List;
 
 /**
- * @Description: 博客评论业务层接口
+ * @Description: 评论业务层接口
+ * @Date: Created in 10:22 2020/6/23
  * @Author: ONESTAR
- * @Date: Created in 13:26 2020/4/5
  * @QQ群: 530311074
  * @URL: https://onestar.newstar.net.cn/
  */
 public interface CommentService {
 
+    //根据博客id查询评论信息
     List<Comment> listCommentByBlogId(Long blogId);
 
-    int saveComment(Comment comment);
-
-//    查询子评论
-//    List<Comment> getChildComment(Long blogId,Long id);
+    //添加保存评论
+    int saveComment(Comment comment,Comment parentComment);
 
     //删除评论
     void deleteComment(Comment comment,Long id);
 
+    // 根据父评论id查询留言信息
+    Comment getEmailByParentId(Long parentId);
 }

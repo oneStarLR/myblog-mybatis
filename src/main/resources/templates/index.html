@@ -4,32 +4,48 @@
     <meta name="baidu-site-verification" content="U67Xy1Qfos" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONESTARの客栈</title>
+    <title>首页-ONESTARの客栈</title>
+    <meta name=”Description” Content=”ONESTARの客栈是一个界面友好，用于记录ONESTAR的个人生活、学习、成长过程，并以文章、图片、音乐、资源等方式进行显示的个人博客网站”>
+    <meta name=”Keywords” Content=”ONESTAR,资源库,照片墙,音乐盒″>
 
+    <style>
+        * { margin: 0; padding: 0;}
+        .txt { line-height: 50px; text-align: center;}
+        /*.txt .btn { margin: 50px 0 0;}*/
+        .txt .btn span { display: inline-block; width: 50px; height: 50px; color: #00B5AD; background-color: #00B5AD; cursor: pointer;}
+        .sidebar-wrapper { position: relative; height: 100%; overflow: auto;}
+        #dowebok { background-color: #ffffff;}
+        #dowebok .nav { margin-top: 50px; line-height: 40px; list-style-type: none;}
+        #dowebok .nav a { display: block; padding: 0 20px; color: black; text-decoration: none;}
+        #dowebok .nav a:hover { background-color: #00B5AD;}
+        [data-simplersidebar='active'] { box-shadow: -3px 0 3px 0 rgba(0, 0, 0, 0.5);}
+    </style>
+
+    <link rel="stylesheet" href="../static/lib/semantic/dist/semantic.min.css" th:href="@{/lib/semantic/dist/semantic.min.css}">
     <link href="../static/images/favicon.ico" th:href="@{/images/me.jpg}" rel="icon" type="image/x-ico">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
     <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css" th:href="@{/lib/editormd/css/editormd.min.css}">
     <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
-
 </head>
 <body>
 
 <!--导航-->
 <nav id="nav" class="gird-header" style="display: none">
-    <div class="ui container">
+    <div class="ui m-container-mini-m" >
         <div class="ui inverted secondary stackable menu">
-            <h2 class="ui olive header item" style="font-family: STSong">ONESTAR</h2>
+
             <!--<div class="right m-item item m-mobile-hide">-->
-            <a href="#" th:href="@{/}" class="active m-item item"><i class="home icon"></i>首页</a>
+                <h2 class="ui olive header item" style="font-family: STSong">ONESTAR</h2>
+                <a href="#" th:href="@{/}" class="active m-item item"><i class="home icon"></i>首页</a>
                 <a href="#" th:href="@{/types/-1}" class="m-item item"><i class="clone outline icon"></i>分类</a>
-                <a href="#" th:href="@{/archives}" class="m-item item"><i class="clock icon"></i>时间轴</a>
+                <a href="#" th:href="@{/archives}" class="m-item item"><i class="coffee icon"></i>流年记</a>
                 <a href="#" th:href="@{/music}" class="m-item item"><i class="music icon"></i>音乐盒</a>
                 <a href="#" th:href="@{/message}" class="m-item item"><i class="book icon"></i>留言板</a>
                 <a href="#" th:href="@{/friends}" class="m-item item"><i class="pencil alternate icon"></i>友人帐</a>
                 <a href="#" th:href="@{/picture}" class="olive m-item item"><i class="image icon"></i>照片墙</a>
+                <a href="#" th:href="@{/resources}" class="m-item item"><i class="graduation cap icon"></i>资源库</a>
                 <a href="#" th:href="@{/about}" class="m-item item"><i class="info icon"></i>关于我</a>
             <!--</div>-->
-            <div class="right m-item item">
+            <div class="right m-item item" >
                 <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
                     <div class="ui icon transparent input m-margin-tb-tiny" style="color: white">
                         <input style="color: white" type="text" name="query" placeholder="Search...." th:value="${query}">
@@ -38,6 +54,7 @@
                 </form>
             </div>
         </div>
+
     </div>
     <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-hide" style="display: none">
         <i class="sidebar icon"></i>
@@ -48,8 +65,8 @@
 
 
 <!--顶部图片-->
-<div class="m-bg-class_outer" style="width: 100%;height: 750px">
-    <img src="../static/images/bg.jpg" th:src="@{/images/bg.jpg}" alt="" class="ui m-bg image" style="width: 100%;height: 100%">
+<div class="m-bg-class_outer" style="width: 100%;height: 800px">
+    <img src="../static/images/bg2.jpg" th:src="@{http://images.newstar.net.cn/img/bg2.jpg}" alt="" class="ui m-bg image" style="width: 100%;height: 100%">
     <div class="m-bg-class_cover" align="center">
         <div class="m-margin-top-maxx" align="center">
             <img class="ui circular image" align="center" src="../static/images/backimg.jpg" th:src="@{/images/me.jpg}" style="width: 150px;height: 150px;">
@@ -87,18 +104,18 @@
         <div id="waypoint" class="ui m-margin-top-large" align="center">
             <a href="#" th:href="@{/}" class="ui circular icon button m-opacity-small m-item item m-mobile-hide m-index-btn" th:classappend="${n==1} ? 'active'"><i class="home icon"></i>首页</a>
             <a href="#" th:href="@{/types/-1}" class="ui circular icon button m-opacity-small m-item item m-mobile-hide m-index-btn" th:classappend="${n==2} ? 'active'"><i class="clone outline icon"></i>分类</a>
-            <a href="#" th:href="@{/archives}" class="ui circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="clock icon"></i>时间轴</a>
+            <a href="#" th:href="@{/archives}" class="ui circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="coffee icon"></i>流年记</a>
             <a href="#" th:href="@{/music}" class="ui circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="music icon"></i>音乐盒</a>
             <a href="#" th:href="@{/message}" class="ui circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==6} ? 'active'"><i class="book icon"></i>留言板</a>
             <a href="#" th:href="@{/friends}" class="ui circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==7} ? 'active'"><i class="pencil alternate icon"></i>友人帐</a>
             <a href="#" th:href="@{/picture}" class="ui circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==8} ? 'active'"><i class="image icon"></i>照片墙</a>
+            <a href="#" th:href="@{/resources}" class="ui circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==8} ? 'active'"><i class="graduation cap icon"></i>资源库</a>
             <a href="#" th:href="@{/about}" class="ui circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==9} ? 'active'"><i class="info icon"></i>关于我</a>
         </div>
         <div class="hiddenDiv"></div>
     </div>
 
 </div>
-
 
 
 <!--最新推荐-->
@@ -114,7 +131,7 @@
                 <img src="../static/images/backimg1.jpg" th:src="@{${blog.firstPicture}}"  alt="" class="ui rounded image">
                 <span class="class_cover" >
                      <h4 class="m-font-size-blog-text m-margin-tb-tiny" th:text="${blog.title}">大圣，此去欲何?</h4>
-                  </span>
+                </span>
             </a>
         </div>
     </div>
@@ -147,7 +164,7 @@
                                             <div class="content"><a href="#" th:href="@{/about}" target="_blank" class="header" th:text="${blog.nickname}" >oneStar</a></div>
                                         </div>
                                         <div class="item">
-                                            <i class="calendar icon"></i><span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2020-01-01</span>
+                                            <i class="calendar icon"></i><span th:text="${#dates.format(blog.createTime,'yyyy-MM-dd')}">2020-01-01</span>
                                         </div>
                                         <div class="item">
                                             <i class="eye icon"></i> <span th:text="${blog.views}">2222</span>
@@ -194,15 +211,79 @@
 
 
 <!--置顶图标-->
-<div id="toolbar" class="m-padded-tb-large m-fixed m-right-bottom" style="display: none">
-    <a href="#" class="ui teal icon button"><i class="chevron up icon"></i> </a>
+<div id="toolbar" class="m-padded m-fixed m-right-bottom" style="display: none">
+    <div class="ui vertical icon buttons ">
+        <div class="ui center aligned basic segment" style="margin-bottom: 0">
+            <button id="payButton" class="ui orange basic circular button">消息</button>
+        </div>
+        <a href="#" class="ui center aligned basic segment icon" style="margin-top: 0"><i class="ui medium orange chevron up icon"></i> </a>
+    </div>
 </div>
 
 
 
+<div class="ui payQR flowing popup transition hidden" style="overflow-y: auto; overflow-x: hidden ">
+    <div class="ui orange basic">
+        <div style="font-size: small !important;width: 200px;height: 550px">
+
+            <div style="font-size: 18px;font-weight: bold;color: #F08047">最新评论</div>
+
+            <div class="ui relaxed divided dropdown list">
+
+                <div class="item" th:each="comment : ${newComment}">
+                    <!--<i class="large github middle aligned icon"></i>-->
+                    <a target="_blank" th:href="@{/blog/{id}(id=${comment.blogId})}" class="content">
+                        <div class="header m-p1" style="margin-left: 10px" th:text="${comment.title}">【Vue 学习】</div>
+                        <div class="description m-p1" style="margin-top: 20px;margin-left: 15px;margin-bottom: 13px;" th:text="${comment.content}">太强了</div>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!--<div th:if="${blog.appreciation}">-->
+    <!--<div class="ui center aligned basic segment">-->
+        <!--<button id="payButton" class="ui orange basic circular button">赞赏</button>-->
+    <!--</div>-->
+    <!--<div class="ui payQR flowing popup transition hidden">-->
+        <!--<div class="ui orange basic label">-->
+            <!--<div class="ui images" style="font-size: inherit !important;">-->
+                <!--<div class="image">-->
+                    <!--<img src="../static/images/zhifupay.jpg" th:src="@{/images/zhifupay.jpg}" alt="" class="ui rounded bordered image" style="width: 120px">-->
+                    <!--<div>支付宝</div>-->
+                <!--</div>-->
+                <!--<div class="image">-->
+                    <!--<img src="../static/images/wechatpay.jpg" th:src="@{/images/wechatpay.jpg}" alt="" class="ui rounded bordered image" style="width: 120px">-->
+                    <!--<div>微信</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+
+
+
 <br>
 <br>
 <br>
+<br>
+
+
+
+
+
+
+
+
+
+
 <!--底部栏-->
 <footer class="ui inverted vertical segment m-padded-tb-massive m-opacity">
     <!--容器-->
@@ -272,11 +353,22 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="../static/lib/jquery-3.2.1/jquery-3.2.1.min.js" th:src="@{/lib/jquery-3.2.1/jquery-3.2.1.min.js}"></script>
+<script src="../static/lib/semantic/dist/semantic.min.js" th:src="@{/lib/semantic/dist/semantic.min.js}"></script>
 <script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
 
+
 <script>
+
+
+// 显示消息
+$('#payButton').popup({
+    popup : $('.payQR.popup'),
+    on : 'click',
+    position: 'top right'
+});
+
 
     // $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
 
@@ -331,9 +423,9 @@
             } else {
                 $('#toolbar').hide(500);
             }
-            console.log('Scrolled to waypoint!  ' + direction);
         }
     })
+
 
 
     $('.menu.toggle').click(function () {
@@ -377,7 +469,6 @@
             } else {
                 $('#nav').hide(500);
             }
-            console.log('Scrolled to waypoint!  ' + direction);
         }
     })
 </script>

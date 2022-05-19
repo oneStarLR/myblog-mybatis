@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>博文发布</title>
   <link href="../../static/images/me.jpg" th:href="@{/images/me.jpg}" rel="icon" type="image/x-ico">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+  <link rel="stylesheet" href="../../static/lib/semantic/dist/semantic.min.css" th:href="@{/lib/semantic/dist/semantic.min.css}">
   <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css" th:href="@{/lib/editormd/css/editormd.min.css}">
   <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
 </head>
 <body>
+
+
 
   <!--导航-->
   <nav class="ui inverted gird-header" >
@@ -18,8 +20,10 @@
         <h2 class="ui olive header item" style="font-family: STSong">管理后台</h2>
         <a href="#" th:href="@{/admin/blogs}" class="active m-item item m-mobile-hide"><i class="home icon"></i>博文管理</a>
         <a href="#" th:href="@{/admin/types}" class=" m-item item m-mobile-hide"><i class="clone outline icon"></i>分类管理</a>
+        <a href="#" th:href="@{/admin/memorys}" class="m-item item m-mobile-hide"><i class="coffee icon"></i>流年记管理</a>
         <a href="#" th:href="@{/admin/friendlinks}" class=" m-item item m-mobile-hide"><i class="pencil alternate icon"></i>友链管理</a>
         <a href="#" th:href="@{/admin/pictures}" class=" m-item item m-mobile-hide"><i class="image icon"></i>相册管理</a>
+        <a href="#" th:href="@{/admin/resources}" class="m-item item m-mobile-hide"><i class="graduation cap icon"></i>资源管理</a>
         <div class="right m-item m-mobile-hide menu">
           <div class="ui dropdown item">
             <div class="text">
@@ -49,6 +53,8 @@
   </div>
   </div>
 
+
+
   <!--中间内容-->
   <div  class="">
     <div class="ui container">
@@ -59,7 +65,7 @@
         <div class="required field">
           <div class="ui left labeled input">
             <div class="ui selection compact teal basic dropdown label">
-              <input type="hidden" value="原创" name="flag" th:value="*{flag}" >
+              <input type="hidden" value="原创" name="flag" th:value="*{flag == null ? '原创':flag}" >
               <i class="dropdown icon"></i>
               <div class="text">原创</div>
               <div class="menu">
@@ -217,8 +223,8 @@
   </footer>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+  <script src="../../static/lib/jquery-3.2.1/jquery-3.2.1.min.js" th:src="@{/lib/jquery-3.2.1/jquery-3.2.1.min.js}"></script>
+  <script src="../../static/lib/semantic/dist/semantic.min.js" th:src="@{/lib/semantic/dist/semantic.min.js}"></script>
   <script src="../../static/lib/editormd/editormd.min.js" th:src="@{/lib/editormd/editormd.min.js}"></script>
 
 
@@ -277,7 +283,34 @@
         height  : 640,
         syncScrolling : "single",
 //        path    : "../static/lib/editormd/lib/"
-        path    : "/lib/editormd/lib/"
+        path    : "/lib/editormd/lib/",
+
+
+        theme : "dark",
+        previewTheme : "dark",
+        editorTheme : "pastel-on-dark",
+        // markdown : md-content,
+        // codeFold : true,
+        // //syncScrolling : false,
+        // saveHTMLToTextarea : true,    // 保存 HTML 到 Textarea
+        // searchReplace : true,
+        // //watch : false,                // 关闭实时预览
+        htmlDecode : "style,script,iframe|on*",            // 开启 HTML 标签解析，为了安全性，默认不开启
+        // //toolbar  : false,             //关闭工具栏
+        // //previewCodeHighlight : false, // 关闭预览 HTML 的代码块高亮，默认开启
+        // emoji : true,
+        // taskList : true,
+        tocm            : true,         // Using [TOCM]
+        tex : true,                   // 开启科学公式TeX语言支持，默认关闭
+        flowChart : true,             // 开启流程图支持，默认关闭
+        sequenceDiagram : true,       // 开启时序/序列图支持，默认关闭,
+        // //dialogLockScreen : false,   // 设置弹出层对话框不锁屏，全局通用，默认为true
+        // //dialogShowMask : false,     // 设置弹出层对话框显示透明遮罩层，全局通用，默认为true
+        // //dialogDraggable : false,    // 设置弹出层对话框不可拖动，全局通用，默认为true
+        // //dialogMaskOpacity : 0.4,    // 设置透明遮罩层的透明度，全局通用，默认值为0.1
+        // //dialogMaskBgColor : "#000", // 设置透明遮罩层的背景颜色，全局通用，默认为#fff
+        // imageUpload : true,
+        // imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"]
       });
     });
     $('.menu.toggle').click(function () {
@@ -292,7 +325,6 @@
       $('[name="published"]').val(false);
       $('#blog-form').submit();
     });
-
 
     $('#publish-btn').click(function () {
       $('[name="published"]').val(true);

@@ -7,7 +7,7 @@
         insert into myblog.t_type values (#{id},#{name});
     </insert>
 
-    <!--根据id，name查询分类-->
+    <!--根据id查询分类-->
     <select id="getType" resultType="com.star.entity.Type">
         select id,name from myblog.t_type where id = #{id}
     </select>
@@ -16,24 +16,6 @@
     <select id="getAllType" resultType="com.star.entity.Type">
         select * from myblog.t_type
     </select>
-
-
-    <resultMap id="type" type="com.star.entity.Type">
-        <id property="id" column="tid"/>
-        <result property="name" column="name"/>
-        <collection property="blogs" ofType="com.star.entity.Blog">
-            <id property="id" column="bid"/>
-            <result property="title" column="title"/>
-            <result property="typeId" column="type_id"/>
-        </collection>
-    </resultMap>
-
-    <!--分类页面查询-->
-    <select id="getAllTypeAndBlog" resultMap="type">
-        select t.id tid, t.name, b.id bid, b.title,b.type_id from myblog.t_type t,myblog.t_blog b where t.id = b.type_id
-    </select>
-
-
 
     <!--根据分类名称来查询-->
     <select id="getTypeByName" resultType="com.star.entity.Type">
@@ -46,8 +28,25 @@
     </update>
 
     <!--删除分类-->
-    <delete id="deleteType" >
+    <delete id="deleteType">
         delete from myblog.t_type where id = #{id}
     </delete>
+
+
+    <resultMap id="type" type="com.star.entity.Type">
+        <id property="id" column="tid"/>
+        <result property="name" column="name"/>
+        <collection property="blogs" ofType="com.star.entity.Blog">
+            <id property="id" column="bid"/>
+            <result property="title" column="title"/>
+            <result property="typeId" column="type_id"/>
+        </collection>
+    </resultMap>
+    <!--查询所有分类-->
+    <select id="getAllTypeAndBlog" resultMap="type">
+        select t.id tid, t.name, b.id bid, b.title,b.type_id
+        from myblog.t_type t,myblog.t_blog b
+        where t.id = b.type_id
+    </select>
 
 </mapper>

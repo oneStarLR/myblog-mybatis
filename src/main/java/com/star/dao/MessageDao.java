@@ -33,4 +33,6 @@ public interface MessageDao {
     //删除评论
     void deleteMessage(Long id);
 
+    // 根据父评论id查询留言信息
+    Message getEmailByParentId(Long parentId);
 }

@@ -6,8 +6,8 @@ import java.util.List;
 
 /**
  * @Description: 留言实体类
+ * @Date: Created in 11:44 2020/6/1
  * @Author: ONESTAR
- * @Date: Created in 9:26 2020/3/26
  * @QQ群: 530311074
  * @URL: https://onestar.newstar.net.cn/
  */
@@ -22,10 +22,23 @@ public class Message {
     private Long parentMessageId;
     private boolean adminMessage;
 
-    //回复评论
+    //回复留言
     private List<Message> replyMessages = new ArrayList<>();
     private Message parentMessage;
     private String parentNickname;
+
+    private String parentEmail;
+
+    public String getParentEmail() {
+        return parentEmail;
+    }
+
+    public String setParentEmail(String parentEmail) {
+        this.parentEmail = parentEmail;
+        return parentEmail;
+    }
+
+
 
     public Message() {
     }
@@ -86,6 +99,14 @@ public class Message {
         this.parentMessageId = parentMessageId;
     }
 
+    public boolean isAdminMessage() {
+        return adminMessage;
+    }
+
+    public void setAdminMessage(boolean adminMessage) {
+        this.adminMessage = adminMessage;
+    }
+
     public List<Message> getReplyMessages() {
         return replyMessages;
     }
@@ -110,13 +131,6 @@ public class Message {
         this.parentNickname = parentNickname;
     }
 
-    public boolean isAdminMessage() {
-        return adminMessage;
-    }
-
-    public void setAdminMessage(boolean adminMessage) {
-        this.adminMessage = adminMessage;
-    }
 
     @Override
     public String toString() {
@@ -132,6 +146,7 @@ public class Message {
                 ", replyMessages=" + replyMessages +
                 ", parentMessage=" + parentMessage +
                 ", parentNickname='" + parentNickname + '\'' +
+                ", parentEmail='" + parentEmail + '\'' +
                 '}';
     }
 }

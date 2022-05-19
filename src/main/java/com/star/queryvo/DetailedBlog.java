@@ -1,24 +1,22 @@
 package com.star.queryvo;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 /**
- * @Description:
+ * @Description: 博客详情实体类
+ * @Date: Created in 10:10 2020/6/19
  * @Author: ONESTAR
- * @Date: Created in 1:03 2020/4/4
  * @QQ群: 530311074
  * @URL: https://onestar.newstar.net.cn/
  */
 public class DetailedBlog {
 
+    //博客信息
     private Long id;
     private String firstPicture;
     private String flag;
     private String title;
     private String content;
-
     private Integer views;
     private Integer commentCount;
     private Date updateTime;
@@ -28,7 +26,7 @@ public class DetailedBlog {
     private String nickname;
     private String avatar;
 
-    //Type
+    //分类名称
     private String typeName;
 
     public DetailedBlog() {

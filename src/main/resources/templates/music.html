@@ -3,15 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONESTAR-音乐盒</title>
+    <title>音乐盒-ONESTARの客栈</title>
+    <meta name=”Description” Content=”ONESTAR的个人博客，音乐盒页面，收录ONESTAR个人喜好音乐，用于音乐播放，在线听音乐”>
+    <meta name=”Keywords” Content=”ONESTAR,音乐盒,音乐″>
 
     <link href="../static/images/favicon.ico" th:href="@{/images/me.jpg}" rel="icon" type="image/x-ico">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="../static/lib/semantic/dist/semantic.min.css" th:href="@{/lib/semantic/dist/semantic.min.css}">
     <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
     <link rel="stylesheet" href="../static/lib/music/css/zplayer.min.css" th:href="@{/lib/music/css/zplayer.min.css}" />
     <script type="text/javascript" src="../static/lib/music/js/zplayer.min.js" th:src="@{/lib/music/js/zplayer.min.js}"></script>
-    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="../static/lib/jquery-3.2.1/jquery-3.2.1.min.js" th:src="@{/lib/jquery-3.2.1/jquery-3.2.1.min.js}"></script>
+    <script src="../static/lib/semantic/dist/semantic.min.js" th:src="@{/lib/semantic/dist/semantic.min.js}"></script>
 
 
 
@@ -20,17 +22,18 @@
 
 <!--导航-->
 <nav class="gird-header">
-    <div class="ui container">
+    <div class="ui m-container-mini-m">
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui olive header item" style="font-family: STSong">ONESTAR</h2>
             <!--<div class="right m-item item m-mobile-hide">-->
                 <a href="#" target="_blank" th:href="@{/}" class="m-item item m-mobile-hide"><i class="home icon"></i>首页</a>
                 <a href="#" target="_blank" th:href="@{/types/-1}" class="m-item item m-mobile-hide"><i class="clone outline icon"></i>分类</a>
-                <a href="#" target="_blank" th:href="@{/archives}" class="m-item item m-mobile-hide"><i class="clock icon"></i>时间轴</a>
+                <a href="#" target="_blank" th:href="@{/archives}" class="m-item item m-mobile-hide"><i class="coffee icon"></i>流年记</a>
                 <a href="#" th:href="@{/music}" class="active m-item item m-mobile-hide"><i class="music icon"></i>音乐盒</a>
                 <a href="#" target="_blank" th:href="@{/message}" class="m-item item m-mobile-hide"><i class="book icon"></i>留言板</a>
                 <a href="#" target="_blank" th:href="@{/friends}" class="m-item item m-mobile-hide"><i class="pencil alternate icon"></i>友人帐</a>
                 <a href="#" target="_blank" th:href="@{/picture}" class="m-item item m-mobile-hide"><i class="image icon"></i>照片墙</a>
+                <a href="#" th:href="@{/resources}" class="m-item item m-mobile-hide"><i class="graduation cap icon"></i>资源库</a>
                 <a href="#" target="_blank" th:href="@{/about}" class="m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
             <!--</div>-->
             <div class="right m-item item m-mobile-hide">
@@ -50,7 +53,7 @@
 
 <!--顶部图片-->
 <div class="m-bg-type_outer" style="width: 100%;height: 40%">
-    <img src="../static/images/music.jpg" th:src="@{/images/music.jpg}" alt="" class="ui m-bg image" style="width: 100%;height: 100%">
+    <img src="../static/images/music.jpg" th:src="@{http://images.newstar.net.cn/img/music.jpg}" alt="" class="ui m-bg image" style="width: 100%;height: 100%">
     <div class="m-bg-class_cover">
         <div class="ui container" style="position: relative ;bottom: -540px;">
             <div class="m-font-size-title m-right-bottom" align="center" style="font-family:'STXingkai'">音乐盒</div>
@@ -68,7 +71,211 @@
     var zp2 = new zplayer({
         element: document.getElementById("player2"),
         lrcStart: 1,/*是否开启歌词功能 ，默认false（为true时musics集合中需要传入lrc字段。）*/
-        musics: [{
+        musics: [
+            {
+                title: "推开世界的门",
+                author: "黄榕生",
+                url: "http://music.163.com/song/media/outer/url?id=500410109.mp3",
+                pic: "http://p1.music.126.net/PNMq0iypxEeHPhJFUnhQZA==/109951163007879949.jpg?param=300y300",
+                lrc: "[00:00.000] 作词 : 火星电台/黄少峰\n" +
+                    "[00:00.528] 作曲 : 火星电台/黄少峰\n" +
+                    "[00:01.56]编曲：赵兆\n" +
+                    "[00:01.91]音乐总监：赵兆\n" +
+                    "[00:02.22]音响总监：何飚\n" +
+                    "[00:02.57]声乐指导：梁古驰\n" +
+                    "[00:02.93]键盘：宋涛 白羽翔\n" +
+                    "[00:03.33]吉他：薛峰 王传统\n" +
+                    "[00:03.70]贝斯：韩 阳\n" +
+                    "[00:04.09]鼓手：郝稷伦\n" +
+                    "[00:04.51]打击乐：王宏涛\n" +
+                    "[00:04.91]PGM：曾嵘\n" +
+                    "[00:05.33]和声：张石荻 李宏洲 胡维纳 王妞妞\n" +
+                    "[00:05.81]弦乐：靳海音®弦乐团\n" +
+                    "[00:06.25]混音：茆博文 雷长航 李卓\n" +
+                    "[00:06.64]推开世界的门\n" +
+                    "[00:13.60]你是站在门外怕迟到的人\n" +
+                    "[00:20.32]捧着一颗不懂计较的认真\n" +
+                    "[00:27.11]吻过你的眼睛就无畏的青春\n" +
+                    "[00:34.11]左手的泥呀 右手的泥呀\n" +
+                    "[00:37.61]知己的花衣裳\n" +
+                    "[00:40.64]世界本该是你醒来的模样\n" +
+                    "[00:47.80]左眼的悲伤 右眼的倔强 看起来都一样\n" +
+                    "[00:54.10]原来你就是我自负的胆量\n" +
+                    "[01:01.24]\n" +
+                    "[01:14.71]推开世界的门\n" +
+                    "[01:21.14]你是站在门外最孤单的人\n" +
+                    "[01:27.75]捧着一颗不懂计较的认真\n" +
+                    "[01:34.41]路过你的时候 时间多残忍\n" +
+                    "[01:41.83]左手的泥呀 右手的泥呀\n" +
+                    "[01:45.21]知己的花衣裳\n" +
+                    "[01:48.18]世界本该是你诚实的模样\n" +
+                    "[01:55.30]左眼的悲伤 右眼的倔强 看起来都一样\n" +
+                    "[02:01.65]原来你就是我走失的地方\n" +
+                    "[02:08.99]\n" +
+                    "[02:35.73]左手的泥呀 右手的泥呀\n" +
+                    "[02:39.11]知己的花衣裳\n" +
+                    "[02:42.18]世界本该是你诚实的模样\n" +
+                    "[02:49.01]年少的轻狂 迟暮的伤 都等着被她原谅\n" +
+                    "[02:55.67]原来你就是我走失的渴望\n" +
+                    "[03:02.64]年少的轻狂 迟暮的伤 都等着被她原谅\n" +
+                    "[03:13.19]原来你就是我回去的地方\n" +
+                    "[03:25.78]"
+            },
+
+            {
+                title: "你是人间四月天",
+                author: "邵帅",
+                url: "http://music.163.com/song/media/outer/url?id=1344897943.mp3",
+                pic: "http://p2.music.126.net/kQJQD58WkmQneTneOYe22A==/109951164252455813.jpg?param=300y300",
+                lrc: "[00:00.000] 作词 : 解忧邵帅\n" +
+                    "[00:01.000] 作曲 : 解忧邵帅\n" +
+                    "[00:24.14]跨越山河去拥抱你，多大风浪都在一起\n" +
+                    "[00:32.31]听到最美的记忆，关于你所有的消息。\n" +
+                    "[00:40.37]盼望每天都看到你，雨天也风和日丽。\n" +
+                    "[00:48.28]花花绿绿的世界里，我只会喜欢你。\n" +
+                    "[00:56.15]愿你在我看不到的地方安然无恙，\n" +
+                    "[01:00.09]愿你的冬天永远不缺暖阳。\n" +
+                    "[01:03.99]愿你的明天不再经历雨打风霜，\n" +
+                    "[01:08.06]愿你的未来永远热泪盈眶。\n" +
+                    "[01:12.89]\n" +
+                    "[01:28.33]最美好的年纪里，柴米油盐酱醋你。\n" +
+                    "[01:36.59]春风把我带给你，四月润湿了空气。\n" +
+                    "[01:44.40]不温柔的世界里，你是我的运气。\n" +
+                    "[01:52.77]我全部的好脾气，因为我爱你。\n" +
+                    "[02:00.15]愿我在六十岁的时候陪你看看夕阳，\n" +
+                    "[02:04.12]愿我在想起你嘴角微微上扬。\n" +
+                    "[02:08.03]愿我在北方的冬天为你披件衣裳，\n" +
+                    "[02:12.05]愿我在一贫如洗能有你在身旁。\n" +
+                    "[02:16.76]\n" +
+                    "[02:48.04]愿你在我看不到的地方安然无恙，\n" +
+                    "[02:52.06]愿你的冬天永远不缺暖阳。\n" +
+                    "[02:56.11]愿你的明天不再经历雨打风霜，\n" +
+                    "[03:00.03]愿你的未来永远热泪盈眶。\n" +
+                    "[03:04.11]愿我在六十岁的时候陪你看看夕阳，\n" +
+                    "[03:08.02]愿我在想起你嘴角微微上扬。\n" +
+                    "[03:12.03]愿我在北方的冬天为你披件衣裳，\n" +
+                    "[03:16.18]愿我在一贫如洗能有你在身旁。\n" +
+                    "[03:20.84]制作人：唐显程\n" +
+                    "[03:22.39]编曲：唐显程 张东升\n" +
+                    "[03:23.59]吉他：张东升\n" +
+                    "[03:24.99]和声：邵帅 唐显程 张东升\n" +
+                    "[03:26.24]录音棚：郑州木纹之声\n" +
+                    "[03:27.49]混音：唐显程\n" +
+                    "[03:28.80]封面：刘扬\n" +
+                    "[03:30.40]祝有情人，白头到老。\n" +
+                    "[03:32.66]"
+            },
+            {
+                title: "那个女孩",
+                author: "戴羽彤",
+                url: "http://music.163.com/song/media/outer/url?id=1399524350.mp3",
+                pic: "http://p1.music.126.net/OH5LHh9jdBc4XH9aJjFnuw==/109951164452739240.jpg?param=300y300",
+                lrc: "[00:00.000] 作词 : 张泽熙\n" +
+                    "[00:01.000] 作曲 : 张泽熙\n" +
+                    "[00:06.00]\n" +
+                    "[00:28.10]想问你看过一张照片\n" +
+                    "[00:34.26]那个女孩笑得很甜很甜很甜\n" +
+                    "[00:41.17]他们说你就住在青浦路的下面\n" +
+                    "[00:47.53]他们说你已经走的很远很远\n" +
+                    "[00:54.60]那天你喝醉了抽了一夜的香烟\n" +
+                    "[01:01.50]摇摇晃晃走到镜子前\n" +
+                    "[01:08.16]擦去眼泪回想起了从前\n" +
+                    "[01:14.47]再去看你已经哭红了双眼\n" +
+                    "[01:18.74]\n" +
+                    "[01:47.61]爱你我已不再是幼稚的少年\n" +
+                    "[01:54.68]你离开以后我如此的可怜\n" +
+                    "[02:01.34]让风告诉你我对你的思念\n" +
+                    "[02:07.60]让阳光替我护你的周全\n" +
+                    "[02:14.77]那个女孩为你哭红了双眼\n" +
+                    "[02:21.60]那个女孩为你付出了华年\n" +
+                    "[02:28.10]那个女孩为你错了一遍又一遍\n" +
+                    "[02:35.10]那个女孩已经走的很远很远\n" +
+                    "[02:41.58]也许诗人也不曾去过海边\n" +
+                    "[02:48.33]也许孤独的人也会走出房间\n" +
+                    "[02:54.83]也许我们从来都不曾互相亏欠\n" +
+                    "[03:00.97]也许我留下的只有对你的思念\n" +
+                    "[03:08.44]想问你看过一张照片\n" +
+                    "[03:14.65]那个女孩笑的很甜很甜很甜\n" +
+                    "[03:21.44]如果你也不曾与她相见\n" +
+                    "[03:27.40]那就算了吧我在余生里思念\n" +
+                    "[03:36.17]\n"
+            },
+            {
+                title: "你的答案",
+                author: "阿冗",
+                url: "http://music.163.com/song/media/outer/url?id=1400256289.mp3",
+                pic: "http://p1.music.126.net/OlX-4S4L0Hdkyy_DQ27zag==/109951164459621658.jpg?param=300y300",
+                lrc: "[00:00.000] 作词 : 林晨阳 /刘涛\n" +
+                    "[00:01.000] 作曲 : 刘涛\n" +
+                    "[00:02.21]编曲 : 谭侃侃\n" +
+                    "[00:03.00](本作品声明：著作权权利保留，未经许可，不得使用)\n" +
+                    "[00:25.33]也许世界就这样\n" +
+                    "[00:28.47]我也还在路上\n" +
+                    "[00:31.25]没有人能诉说\n" +
+                    "[00:36.32]也许我只能沉默\n" +
+                    "[00:39.21]眼泪湿润眼眶\n" +
+                    "[00:42.01]可又不甘懦弱\n" +
+                    "[00:45.94]低着头期待白昼\n" +
+                    "[00:50.90]接受所有的嘲讽\n" +
+                    "[00:56.67]向着风拥抱彩虹\n" +
+                    "[01:01.89]勇敢的向前走\n" +
+                    "[01:06.71]黎明的那道光\n" +
+                    "[01:08.88]会越过黑暗\n" +
+                    "[01:11.52]打破一切恐惧我能\n" +
+                    "[01:14.66]找到答案\n" +
+                    "[01:17.29]哪怕要逆着光\n" +
+                    "[01:19.72]就驱散黑暗\n" +
+                    "[01:22.56]丢弃所有的负担\n" +
+                    "[01:25.65]不再孤单\n" +
+                    "[01:28.54]不再孤单\n" +
+                    "[01:39.04]也许世界就这样\n" +
+                    "[01:41.93]我也还在路上\n" +
+                    "[01:44.87]没有人能诉说\n" +
+                    "[01:49.86]也许我只能沉默\n" +
+                    "[01:52.90]眼泪湿润眼眶\n" +
+                    "[01:55.58]可又不甘懦弱\n" +
+                    "[01:59.40]低着头期待白昼\n" +
+                    "[02:04.61]接受所有的嘲讽\n" +
+                    "[02:10.27]向着风拥抱彩虹\n" +
+                    "[02:15.59]勇敢的向前走\n" +
+                    "[02:20.34]黎明的那道光\n" +
+                    "[02:22.47]会越过黑暗\n" +
+                    "[02:25.15]打破一切恐惧我能\n" +
+                    "[02:28.29]找到答案\n" +
+                    "[02:30.92]哪怕要逆着光\n" +
+                    "[02:33.50]就驱散黑暗\n" +
+                    "[02:35.99]丢弃所有的负担\n" +
+                    "[02:39.37]不再孤单\n" +
+                    "[02:42.16]不再孤单\n" +
+                    "[02:50.44]黎明的那道光\n" +
+                    "[02:52.56]会越过黑暗\n" +
+                    "[02:55.34]打破一切恐惧我能\n" +
+                    "[02:58.33]找到答案\n" +
+                    "[03:01.11]哪怕要逆着光\n" +
+                    "[03:03.39]就驱散黑暗\n" +
+                    "[03:06.07]有一万种的力量\n" +
+                    "[03:09.31]淹没孤单\n" +
+                    "[03:12.36]不再孤单\n" +
+                    "[03:14.58]也许世界就这样\n" +
+                    "[03:17.37]我也还在路上\n" +
+                    "[03:20.38]没有人能诉说\n" +
+                    "[03:25.28]也许我只能沉默\n" +
+                    "[03:28.32]眼泪湿润眼眶\n" +
+                    "[03:31.11]可又不甘懦弱\n" +
+                    "[03:35.41]制作人 : 刘涛\n" +
+                    "[03:35.56]吉他 : 谭侃侃\n" +
+                    "[03:36.57]键盘 : 谭侃侃\n" +
+                    "[03:36.73]合声 : 金天 / 胡阁\n" +
+                    "[03:36.93]录音棚 : 北京好乐无荒录音棚\n" +
+                    "[03:37.33]录音师 : 吴佳敏\n" +
+                    "[03:37.49]混音师 : 刘三斤\n" +
+                    "[03:37.69]母带后期混音师 : 刘三斤\n" +
+                    "[03:38.04]监制 : 陶诗\n" +
+                    "[03:38.14]封面设计 : kidult.\n" +
+                    "[03:38.35]OP&SP : 好乐无荒\n" +
+                    "[03:38.55]鸣谢 : 万物体验家 / 不要音乐"
+            },
+            {
             title: "只要平凡",
             author: "张杰/张碧晨",
             url: "http://music.163.com/song/media/outer/url?id=574919767.mp3",

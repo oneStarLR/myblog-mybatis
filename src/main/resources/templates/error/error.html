@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>错误</title>
   <link href="../static/images/favicon.ico" th:href="@{/images/me.jpg}" rel="icon" type="image/x-ico">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+  <link rel="stylesheet" href="../../static/lib/semantic/dist/semantic.min.css" th:href="@{/lib/semantic/dist/semantic.min.css}">
   <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
 </head>
 <body>
@@ -82,8 +82,8 @@
 </footer>
 
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<script src="../../static/lib/jquery-3.2.1/jquery-3.2.1.min.js" th:src="@{/lib/jquery-3.2.1/jquery-3.2.1.min.js}"></script>
+<script src="../../static/lib/semantic/dist/semantic.min.js" th:src="@{/lib/semantic/dist/semantic.min.js}"></script>
 
 <script>
     $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");

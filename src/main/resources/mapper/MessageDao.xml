@@ -4,8 +4,8 @@
 
     <!--添加留言-->
     <insert id="saveMessage" parameterType="com.star.entity.Message">
-        insert into myblog.t_message (nickname,email,content,avatar,create_time,parent_message_id,admin_message)
-        values (#{nickname},#{email},#{content},#{avatar},#{createTime},#{parentMessageId},#{adminMessage});
+        insert ignore  into myblog.t_message (nickname,email,content,avatar,create_time,parent_message_id,admin_message,parent_email)
+        values (#{nickname},#{email},#{content},#{avatar},#{createTime},#{parentMessageId},#{adminMessage},#{parentEmail});
     </insert>
 
     <!--查询父级留言-->
@@ -36,6 +36,14 @@
     <delete id="deleteMessage" >
         delete from myblog.t_message where id = #{id}
     </delete>
+
+<!--    根据父评论id查询留言信息-->
+    <select id="getEmailByParentId" resultType="com.star.entity.Message">
+        select *
+        from myblog.t_message c
+        where c.id = #{parentId}
+        order by c.create_time desc
+    </select>
 
 
 </mapper>

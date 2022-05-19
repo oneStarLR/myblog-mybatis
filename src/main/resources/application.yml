@@ -2,9 +2,17 @@ spring:
   thymeleaf:
     mode: HTML
   profiles:
-    active: pro
-  messages:
-    basename: i18n/messages
+    active: dev
+
+mybatis:
+  type-aliases-package: com.star.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
 
 comment.avatar: /images/avatar.png
 message.avatar: /images/avatar.png
+
+
+
+

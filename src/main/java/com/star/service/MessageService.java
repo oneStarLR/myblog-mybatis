@@ -17,9 +17,11 @@ public interface MessageService {
     List<Message> listMessage();
 
     //保存留言
-    int saveMessage(Message message);
+    int saveMessage(Message message,Message parentMessage);
 
     //删除留言
     void deleteMessage(Long id);
 
+
+    Message getEmailByParentId(Long parentId);
 }

@@ -4,8 +4,8 @@ import java.util.Date;
 
 /**
  * @Description: 编辑修改文章实体类
+ * @Date: Created in 15:55 2020/6/6
  * @Author: ONESTAR
- * @Date: Created in 23:41 2020/4/1
  * @QQ群: 530311074
  * @URL: https://onestar.newstar.net.cn/
  */
@@ -67,7 +67,6 @@ public class ShowBlog {
     public void setTypeId(Long typeId) {
         this.typeId = typeId;
     }
-
 
     public String getFirstPicture() {
         return firstPicture;

@@ -6,8 +6,8 @@ import java.util.List;
 
 /**
  * @Description: 博客实体类
+ * @Date: Created in 10:10 2020/6/1
  * @Author: ONESTAR
- * @Date: Created in 22:58 2020/3/25
  * @QQ群: 530311074
  * @URL: https://onestar.newstar.net.cn/
  */
@@ -19,9 +19,7 @@ public class Blog {
     private String firstPicture;
     private String flag;
     private Integer views;
-
     private Integer commentCount;
-
     private boolean appreciation;
     private boolean shareStatement;
     private boolean commentabled;
@@ -29,16 +27,17 @@ public class Blog {
     private boolean recommend;
     private Date createTime;
     private Date updateTime;
-
-    private Long typeId;
-    private Long userId;
     private String description;
+
     private Type type;
     private User user;
+    private Long typeId;
+    private Long userId;
     private List<Comment> comments = new ArrayList<>();
 
     public Blog() {
     }
+
 
     public Long getId() {
         return id;
@@ -152,22 +151,6 @@ public class Blog {
         this.updateTime = updateTime;
     }
 
-    public Long getTypeId() {
-        return typeId;
-    }
-
-    public void setTypeId(Long typeId) {
-        this.typeId = typeId;
-    }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -190,6 +173,22 @@ public class Blog {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public Long getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(Long typeId) {
+        this.typeId = typeId;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public List<Comment> getComments() {
@@ -217,11 +216,11 @@ public class Blog {
                 ", recommend=" + recommend +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
-                ", typeId=" + typeId +
-                ", userId=" + userId +
                 ", description='" + description + '\'' +
                 ", type=" + type +
                 ", user=" + user +
+                ", typeId=" + typeId +
+                ", userId=" + userId +
                 ", comments=" + comments +
                 '}';
     }

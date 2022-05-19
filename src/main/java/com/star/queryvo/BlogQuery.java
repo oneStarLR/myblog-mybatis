@@ -5,9 +5,9 @@ import com.star.entity.Type;
 import java.util.Date;
 
 /**
- * @Description: 显示数据实体类
+ * @Description: 查询博客列表
+ * @Date: Created in 9:31 2020/6/3
  * @Author: ONESTAR
- * @Date: Created in 15:20 2020/3/31
  * @QQ群: 530311074
  * @URL: https://onestar.newstar.net.cn/
  */
@@ -15,6 +15,7 @@ public class BlogQuery {
 
     private Long id;
     private String title;
+    private Date createTime;
     private Date updateTime;
     private Boolean recommend;
     private Boolean published;
@@ -80,11 +81,20 @@ public class BlogQuery {
         this.type = type;
     }
 
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
     @Override
     public String toString() {
         return "BlogQuery{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
+                ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
                 ", recommend=" + recommend +
                 ", published=" + published +

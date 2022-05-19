@@ -13,43 +13,50 @@ import java.util.Arrays;
 
 /**
  * @Description: 日志切面处理
+ * @Date: Created in 23:31 2020/5/21
  * @Author: ONESTAR
- * @Date: Created in 16:18 2020/3/25
- * @QQ: 316392836
- * @URL: http://122.51.28.187:8080/
+ * @QQ群: 530311074
+ * @URL: https://onestar.newstar.net.cn/
  */
 @Aspect
 @Component
 public class LogAspect {
+    // 获取日志信息
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-//    拦截控制器
+    //定义切面，申明log()是一个切面
     @Pointcut("execution(* com.star.controller.*.*(..))")
     public void log() {}
 
-
+    // 在切面之前执行
     @Before("log()")
     public void doBefore(JoinPoint joinPoint) {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
+        //获取URL、IP
         String url = request.getRequestURL().toString();
         String ip = request.getRemoteAddr();
+        //获取请求方法
         String classMethod = joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName();
+        //获取请求参数
         Object[] args = joinPoint.getArgs();
         RequestLog requestLog = new RequestLog(url, ip, classMethod, args);
         logger.info("Request : {}", requestLog);
     }
 
+    //在切面之后执行
     @After("log()")
     public void doAfter() {
 //        logger.info("--------doAfter--------");
     }
 
+    //返回之后拦截
     @AfterReturning(returning = "result",pointcut = "log()")
     public void doAfterRuturn(Object result) {
         logger.info("Result : {}", result);
     }
 
+//    封装请求参数
     private class RequestLog {
         private String url;
         private String ip;

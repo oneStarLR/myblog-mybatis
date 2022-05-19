@@ -3,28 +3,30 @@ package com.star.queryvo;
 import java.util.Date;
 
 /**
- * @Description: 博客首页数据实体类
+ * @Description: 首页博客信息实体类
+ * @Date: Created in 9:39 2020/6/19
  * @Author: ONESTAR
- * @Date: Created in 9:09 2020/4/3
  * @QQ群: 530311074
  * @URL: https://onestar.newstar.net.cn/
  */
 public class FirstPageBlog {
 
-    //Blog
+    //博客信息
     private Long id;
     private String title;
     private String firstPicture;
     private Integer views;
     private Integer commentCount;
+    private Date createTime;
     private Date updateTime;
     private String description;
 
-    //Type
+    //分类名称
     private String typeName;
 
-    //User
+    //用户名
     private String nickname;
+    //用户头像
     private String avatar;
 
     public FirstPageBlog() {
@@ -110,6 +112,14 @@ public class FirstPageBlog {
         this.avatar = avatar;
     }
 
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
     @Override
     public String toString() {
         return "FirstPageBlog{" +
@@ -118,6 +128,7 @@ public class FirstPageBlog {
                 ", firstPicture='" + firstPicture + '\'' +
                 ", views=" + views +
                 ", commentCount=" + commentCount +
+                ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
                 ", description='" + description + '\'' +
                 ", typeName='" + typeName + '\'' +

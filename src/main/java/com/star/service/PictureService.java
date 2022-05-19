@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * @Description: 照片墙业务层接口
- * @Date: Created in 23:30 2020/4/16
+ * @Date: Created in 11:31 2020/6/15
  * @Author: ONESTAR
  * @QQ群: 530311074
  * @URL: https://onestar.newstar.net.cn/
@@ -22,10 +22,10 @@ public interface PictureService {
     //根据id查询照片
     Picture getPicture(Long id);
 
-//    编辑修改相册
+    //编辑修改相册
     int updatePicture(Picture picture);
 
-//    删除照片
-    void deletePicture(Long id);
+    //删除照片
+    int deletePicture(Long id);
 
 }

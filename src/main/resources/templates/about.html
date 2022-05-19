@@ -3,26 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ONESTAR-关于我</title>
+  <title>关于我-ONESTARの客栈</title>
+    <meta name=”Description” Content=”ONESTAR的个人博客，专注于技术生活分享”>
+    <meta name=”Keywords” Content=”ONESTAR,关于我,一颗星″>
+
     <link href="../static/images/favicon.ico" th:href="@{/images/me.jpg}" rel="icon" type="image/x-ico">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="../static/lib/semantic/dist/semantic.min.css" th:href="@{/lib/semantic/dist/semantic.min.css}">
     <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
 </head>
 <body>
 
 <!--导航-->
 <nav class="gird-header">
-    <div class="ui container">
+    <div class="ui m-container-mini-m">
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui olive header item" style="font-family: STSong">ONESTAR</h2>
             <!--<div class="right m-item item m-mobile-hide">-->
                 <a href="#" th:href="@{/}" class="m-item item m-mobile-hide "><i class="home icon"></i>首页</a>
                 <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide"><i class="clone outline icon"></i>分类</a>
-                <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide"><i class="clock icon"></i>时间轴</a>
+                <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide"><i class="coffee icon"></i>流年记</a>
                 <a href="#" th:href="@{/music}" class="m-item item m-mobile-hide"><i class="music icon"></i>音乐盒</a>
                 <a href="#" th:href="@{/message}" class="m-item item m-mobile-hide"><i class="book icon"></i>留言板</a>
                 <a href="#" th:href="@{/friends}" class="m-item item m-mobile-hide"><i class="pencil alternate icon"></i>友人帐</a>
                 <a href="#" th:href="@{/picture}" class="m-item item m-mobile-hide"><i class="image icon"></i>照片墙</a>
+                <a href="#" th:href="@{/resources}" class="m-item item m-mobile-hide"><i class="graduation cap icon"></i>资源库</a>
                 <a href="#" th:href="@{/about}" class="active m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
             <!--</div>-->
             <div class="right m-item item m-mobile-hide">
@@ -35,7 +39,7 @@
             </div>
         </div>
     </div>
-    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+    <a class="ui menu toggle black icon button m-right-top m-mobile-show">
         <i class="sidebar icon"></i>
     </a>
 </nav>
@@ -43,7 +47,7 @@
 
 <!--顶部背景图片-->
 <div class="m-bg-type_outer" style="width: 100%;height: 40%">
-    <img src="../static/images/aboutbg.jpg" th:src="@{/images/aboutbg.jpg}" alt="" class="ui m-bg image" style="width: 100%;height: 100%">
+    <img src="../static/images/aboutbg.jpg" th:src="@{http://images.newstar.net.cn/img/aboutme.png}" alt="" class="ui m-bg image" style="width: 100%;height: 100%">
     <div class="m-bg-class_cover">
         <div class="ui container" style="position: relative ;bottom: -540px;">
             <div class="m-font-size-title" align="center" style="font-family:'STXingkai'">关于我</div>
@@ -123,6 +127,12 @@
     </div>
 </div>
 
+
+<!--置顶图标-->
+<div id="toolbar" class="m-padded-tb-large m-fixed m-right-bottom">
+    <a href="#" class="ui center aligned basic segment icon"><i class="ui medium orange chevron up icon"></i> </a>
+</div>
+
   <br>
   <br>
 
@@ -194,8 +204,8 @@
 </footer>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<script src="../static/lib/jquery-3.2.1/jquery-3.2.1.min.js" th:src="@{/lib/jquery-3.2.1/jquery-3.2.1.min.js}"></script>
+<script src="../static/lib/semantic/dist/semantic.min.js" th:src="@{/lib/semantic/dist/semantic.min.js}"></script>
 
   <script>
       // $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");

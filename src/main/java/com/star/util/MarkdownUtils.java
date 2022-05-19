@@ -85,7 +85,7 @@ public class MarkdownUtils {
                 "| 斯维尔多  | 士大夫  | f啊    |\n" +
                 "| 阿什顿发  | 非固定杆 | 撒阿什顿发 |\n" +
                 "\n";
-        String a = "[ONESTAR](http://122.51.28.187:8080/)";
+        String a = "[ONESTAR](https://onestar.newstar.net.cn/)";
         System.out.println(markdownToHtmlExtensions(a));
     }
 

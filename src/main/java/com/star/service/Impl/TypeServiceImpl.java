@@ -1,9 +1,7 @@
 package com.star.service.Impl;
 
-import com.star.dao.BlogDao;
 import com.star.dao.TypeDao;
 import com.star.entity.Type;
-import com.star.queryvo.FirstPageBlog;
 import com.star.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,9 +10,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- * @Description: 文章分类业务层接口实现类
+ * @Description: 分类业务层接口实现类
+ * @Date: Created in 13:32 2020/6/2
  * @Author: ONESTAR
- * @Date: Created in 15:09 2020/3/27
  * @QQ群: 530311074
  * @URL: https://onestar.newstar.net.cn/
  */
@@ -23,8 +21,6 @@ public class TypeServiceImpl implements TypeService {
 
     @Autowired
     private TypeDao typeDao;
-
-
 
     @Transactional
     @Override
@@ -45,11 +41,6 @@ public class TypeServiceImpl implements TypeService {
     }
 
     @Override
-    public List<Type> getAllTypeAndBlog() {
-        return typeDao.getAllTypeAndBlog();
-    }
-
-    @Override
     public Type getTypeByName(String name) {
         return typeDao.getTypeByName(name);
     }
@@ -66,6 +57,9 @@ public class TypeServiceImpl implements TypeService {
         typeDao.deleteType(id);
     }
 
-
-
+    @Transactional
+    @Override
+    public List<Type> getAllTypeAndBlog() {
+        return typeDao.getAllTypeAndBlog();
+    }
 }

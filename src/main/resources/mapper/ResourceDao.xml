@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.star.dao.ResourceDao">
+
+    <!--查询所有资源-->
+    <select id="listResources" resultType="com.star.entity.Resources">
+        select * from myblog.t_resources order by t_resources.id desc
+    </select>
+
+    <!--添加资源-->
+    <insert id="saveResource" parameterType="com.star.entity.Resources">
+        insert into myblog.t_resources (resource_name,first_type,second_type,picture_address,resource_address,resource_description,sort)
+        values (#{resourceName},#{firstType},#{secondType},#{pictureAddress},#{resourceAddress},#{resourceDescription},#{sort})
+    </insert>
+
+    <!--根据id查询资源-->
+    <select id="getResource" resultType="com.star.entity.Resources">
+        select * from myblog.t_resources r where r.id = #{id}
+    </select>
+
+    <!--编辑修改资源-->
+    <update id="updateResource" parameterType="com.star.entity.Resources">
+        update myblog.t_resources
+        set resource_name = #{resourceName}, first_type = #{firstType}, second_type = #{secondType}, picture_address = #{pictureAddress},
+        resource_address = #{resourceAddress}, resource_description = #{resourceDescription}, sort = #{sort}
+        where id = #{id};
+    </update>
+
+    <!--删除资源-->
+    <delete id="deleteResource" >
+        delete from myblog.t_resources where id = #{id}
+    </delete>
+
+    <!--是否发布-->
+    <update id="is_published" >
+        delete from myblog.t_resources where id = #{id}
+    </update>
+
+    <!--改变发布状态-->
+    <update id="changePublished" parameterType="com.star.entity.Resources">
+        update myblog.t_resources
+        set published = #{published}
+        where id = #{id}
+    </update>
+
+<!--    查询学习资源-->
+    <select id="getStudyResource" resultType="com.star.entity.Resources">
+        select * from myblog.t_resources where first_type = #{studyResource} and published = 1 order by t_resources.sort asc
+    </select>
+
+<!--    查询图片资源-->
+    <select id="getPictureResource" resultType="com.star.entity.Resources">
+        select * from myblog.t_resources where first_type = #{pictureResource} and published = 1 order by t_resources.sort asc
+    </select>
+
+<!--    查询办公资源-->
+    <select id="getOfficeResource" resultType="com.star.entity.Resources">
+        select * from myblog.t_resources where first_type = #{officeResource} and published = 1 order by t_resources.sort asc
+    </select>
+
+<!--    查询娱乐资源-->
+    <select id="getRecreationResource" resultType="com.star.entity.Resources">
+        select * from myblog.t_resources where first_type = #{recrearionResource} and published = 1 order by t_resources.sort asc
+    </select>
+
+<!--    查询设计资源-->
+    <select id="getDesignResource" resultType="com.star.entity.Resources">
+        select * from myblog.t_resources where first_type = #{desognResource} and published = 1 order by t_resources.sort asc
+    </select>
+
+<!--    查询搜索资源-->
+    <select id="getSearchResource" resultType="com.star.entity.Resources">
+        select * from myblog.t_resources where first_type = #{searchResource} and published = 1 order by t_resources.sort asc
+    </select>
+
+<!--    查询工具资源-->
+    <select id="getToolResource" resultType="com.star.entity.Resources">
+        select * from myblog.t_resources where first_type = #{toolResource} and published = 1 order by t_resources.sort asc
+    </select>
+
+<!--    统计学习资源数目-->
+    <select id="getStudyResourceTotle" resultType="java.lang.Integer">
+        select count(*) from myblog.t_resources where t_resources.first_type = #{studyResource}
+    </select>
+    <!--    统计学习资源数目-->
+    <select id="getPictureResourceTotle" resultType="java.lang.Integer">
+        select count(*) from myblog.t_resources where t_resources.first_type = #{pictureResource}
+    </select>
+    <!--    统计学习资源数目-->
+    <select id="getOfficeResourceTotle" resultType="java.lang.Integer">
+        select count(*) from myblog.t_resources where t_resources.first_type = #{officeResource}
+    </select>
+    <!--    统计学习资源数目-->
+    <select id="getRecreationResourceTotle" resultType="java.lang.Integer">
+        select count(*) from myblog.t_resources where t_resources.first_type = #{recreationResource}
+    </select>
+    <!--    统计学习资源数目-->
+    <select id="getDesignResourceTotle" resultType="java.lang.Integer">
+        select count(*) from myblog.t_resources where t_resources.first_type = #{designResource}
+    </select>
+    <!--    统计学习资源数目-->
+    <select id="getSearchResourceTotle" resultType="java.lang.Integer">
+        select count(*) from myblog.t_resources where t_resources.first_type = #{searchResource}
+    </select>
+    <!--    统计学习资源数目-->
+    <select id="getToolResourceTotle" resultType="java.lang.Integer">
+        select count(*) from myblog.t_resources where t_resources.first_type = #{toolResource}
+    </select>
+</mapper>

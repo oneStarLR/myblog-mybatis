@@ -7,18 +7,17 @@ import com.star.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.StringUtils;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
 import java.util.List;
 
+
 /**
- * @Description: 分类管理控制器
+ * @Description:
+ * @Date: Created in 14:56 2020/6/2
  * @Author: ONESTAR
- * @Date: Created in 17:00 2020/3/27
  * @QQ群: 530311074
  * @URL: https://onestar.newstar.net.cn/
  */
@@ -29,9 +28,9 @@ public class TypeController {
     @Autowired
     private TypeService typeService;
 
-//    分页查询分类列表
+    //    分页查询分类列表
     @GetMapping("/types")
-    public String list(Model model,@RequestParam(defaultValue = "1",value = "pageNum") Integer pageNum){
+    public String list(Model model, @RequestParam(defaultValue = "1",value = "pageNum") Integer pageNum){
         //按照排序字段 倒序 排序
         String orderBy = "id desc";
         PageHelper.startPage(pageNum,10,orderBy);
@@ -41,14 +40,14 @@ public class TypeController {
         return "admin/types";
     }
 
-//    返回新增分类页面
+    //    返回新增分类页面
     @GetMapping("/types/input")
     public String input(Model model){
         model.addAttribute("type", new Type());
         return "admin/types-input";
     }
 
-//  新增分类
+    //  新增分类
     @PostMapping("/types")
     public String post(@Valid Type type, RedirectAttributes attributes) {
         Type type1 = typeService.getTypeByName(type.getName());
@@ -65,14 +64,14 @@ public class TypeController {
         return "redirect:/admin/types";
     }
 
-//    跳转修改分类页面
+    //    跳转修改分类页面
     @GetMapping("/types/{id}/input")
     public String editInput(@PathVariable Long id, Model model) {
         model.addAttribute("type", typeService.getType(id));
         return "admin/types-input";
     }
 
-//    编辑修改分类
+    //    编辑修改分类
     @PostMapping("/types/{id}")
     public String editPost(@Valid Type type, RedirectAttributes attributes) {
         Type type1 = typeService.getTypeByName(type.getName());
@@ -89,11 +88,12 @@ public class TypeController {
         return "redirect:/admin/types";
     }
 
-//    删除分类
+    //    删除分类
     @GetMapping("/types/{id}/delete")
     public String delete(@PathVariable Long id,RedirectAttributes attributes) {
         typeService.deleteType(id);
         attributes.addFlashAttribute("message", "删除成功");
         return "redirect:/admin/types";
     }
+
 }

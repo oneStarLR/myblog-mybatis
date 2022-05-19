@@ -2,12 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.star.dao.CommentDao">
 
+    <!--添加评论-->
     <insert id="saveComment" parameterType="com.star.entity.Comment">
         insert into myblog.t_comment (nickname,email,content,avatar,create_time,blog_id,parent_comment_id,admin_comment)
         values (#{nickname},#{email},#{content},#{avatar},#{createTime},#{blogId},#{parentCommentId},#{adminComment});
     </insert>
 
-
+    <!--查询父级评论-->
     <select id="findByBlogIdParentIdNull" resultType="com.star.entity.Comment">
         select *
         from myblog.t_comment c
@@ -15,7 +16,7 @@
         order by c.create_time desc
     </select>
 
-<!--查询一级子评论-->
+    <!--查询一级子评论-->
     <select id="findByBlogIdParentIdNotNull" resultType="com.star.entity.Comment">
         select *
         from myblog.t_comment c
@@ -31,16 +32,17 @@
         order by c.create_time desc
     </select>
 
-    <!--<select id="findByParentCommentId" resultType="com.star.entity.Comment">-->
-        <!--select c.id cid,c.nickname,c.email,c.content,c.avatar,c.create_time,c.blog_id,c.parent_comment_id-->
-        <!--from myblog.t_comment c-->
-        <!--where c.parent_comment_id = #{parentCommentId}-->
-    <!--</select>-->
-
     <!--删除评论-->
     <delete id="deleteComment" >
         delete from myblog.t_comment where id = #{id}
     </delete>
 
+    <!--    根据父评论id查询留言信息-->
+    <select id="getEmailByParentId" resultType="com.star.entity.Comment">
+        select *
+        from myblog.t_comment c
+        where c.id = #{parentId}
+        order by c.create_time desc
+    </select>
 
 </mapper>

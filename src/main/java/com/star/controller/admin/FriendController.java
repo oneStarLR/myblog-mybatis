@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  * @Description: 友链后台管理控制器
- * @Date: Created in 14:01 2020/4/16
+ * @Date: Created in 11:24 2020/6/14
  * @Author: ONESTAR
  * @QQ群: 530311074
  * @URL: https://onestar.newstar.net.cn/
@@ -29,9 +29,9 @@ public class FriendController {
     @Autowired
     private FriendLinkService friendLinkService;
 
-//    查询所有友链
+    //查询所有友链
     @GetMapping("/friendlinks")
-    public String friend(Model model,@RequestParam(defaultValue = "1",value = "pageNum") Integer pageNum){
+    public String friend(Model model, @RequestParam(defaultValue = "1",value = "pageNum") Integer pageNum){
         PageHelper.startPage(pageNum,10);
         List<FriendLink> listFriendLink = friendLinkService.listFriendLink();
         PageInfo<FriendLink> pageInfo = new PageInfo<FriendLink>(listFriendLink);
@@ -39,14 +39,14 @@ public class FriendController {
         return "admin/friendlinks";
     }
 
-//    跳转友链新增页面
+    //跳转友链新增页面
     @GetMapping("/friendlinks/input")
     public String input(Model model) {
         model.addAttribute("friendlink", new FriendLink());
         return "admin/friendlinks-input";
     }
 
-//    友链新增
+    //友链新增
     @PostMapping("/friendlinks")
     public String post(@Valid FriendLink friendLink, BindingResult result, RedirectAttributes attributes){
 
@@ -69,14 +69,14 @@ public class FriendController {
         return "redirect:/admin/friendlinks";
     }
 
-//    跳转友链修改页面
+    //跳转友链修改页面
     @GetMapping("/friendlinks/{id}/input")
     public String editInput(@PathVariable Long id, Model model) {
         model.addAttribute("friendlink", friendLinkService.getFriendLink(id));
         return "admin/friendlinks-input";
     }
 
-//    编辑修改友链
+    //编辑修改友链
     @PostMapping("/friendlinks/{id}")
     public String editPost(@Valid FriendLink friendLink, RedirectAttributes attributes) {
         int t = friendLinkService.updateFriendLink(friendLink);
@@ -88,12 +88,13 @@ public class FriendController {
         return "redirect:/admin/friendlinks";
     }
 
-//    删除友链
+    //删除友链
     @GetMapping("/friendlinks/{id}/delete")
     public String delete(@PathVariable Long id, RedirectAttributes attributes){
         friendLinkService.deleteFriendLink(id);
         attributes.addFlashAttribute("message", "删除成功");
         return "redirect:/admin/friendlinks";
     }
+
 
 }

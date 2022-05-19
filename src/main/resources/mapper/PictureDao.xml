@@ -26,7 +26,7 @@
     </update>
 
     <!--删除照片-->
-    <delete id="deletePicture" >
+    <delete id="deletePicture" parameterType="com.star.entity.Picture">
         delete from myblog.t_picture where id = #{id}
     </delete>
 

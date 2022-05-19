@@ -1,35 +1,38 @@
 package com.star.service;
 
 import com.star.entity.Type;
-import com.star.queryvo.FirstPageBlog;
 
 import java.util.List;
 
-
 /**
- * @Description: 文章分类业务层接口
+ * @Description: 分类持久层接口
+ * @Date: Created in 11:41 2020/6/2
  * @Author: ONESTAR
- * @Date: Created in 14:32 2020/3/27
  * @QQ群: 530311074
  * @URL: https://onestar.newstar.net.cn/
  */
 public interface TypeService {
 
+    //新增保存分类
     int saveType(Type type);
 
+    //根据id查询分类
     Type getType(Long id);
 
-    List<Type>getAllType();
+    //查询所有分类
+    List<Type> getAllType();
 
-    List<Type>getAllTypeAndBlog();
-
+    //根据分类名称查询分类
     Type getTypeByName(String name);
 
+    //编辑修改分类
     int updateType(Type type);
 
+    //删除分类
     void deleteType(Long id);
 
 
-
+    //查询所有分类
+    List<Type>getAllTypeAndBlog();
 
 }

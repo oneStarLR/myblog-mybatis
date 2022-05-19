@@ -3,27 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ONESTAR-时间轴</title>
+  <title>流年记-ONESTARの客栈</title>
+  <meta name=”Description” Content=”ONESTAR的个人博客，流年记页面，用于记录生活点滴过往”>
+  <meta name=”Keywords” Content=”ONESTAR,流年记″>
   <link href="../static/images/favicon.ico" th:href="@{/images/me.jpg}" rel="icon" type="image/x-ico">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+  <link rel="stylesheet" href="../static/lib/semantic/dist/semantic.min.css" th:href="@{/lib/semantic/dist/semantic.min.css}">
   <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
   <link rel="stylesheet" href="../static/css/timeline.css" th:href="@{/css/timeline.css}">
+  <link rel="stylesheet" href="../static/css/jazz-timeline.css" th:href="@{/css/jazz-timeline.css}">
 </head>
 <body>
 
   <!--导航-->
   <nav class="gird-header">
-    <div class="ui container">
+    <div class="ui m-container-mini-m">
       <div class="ui inverted secondary stackable menu">
         <h2 class="ui olive header item" style="font-family: STSong">ONESTAR</h2>
         <!--<div class="right m-item item m-mobile-hide">-->
           <a href="#" th:href="@{/}" class="m-item item m-mobile-hide "><i class="home icon"></i>首页</a>
           <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide"><i class="clone outline icon"></i>分类</a>
-          <a href="#" th:href="@{/archives}" class="active m-item item m-mobile-hide"><i class="clock icon"></i>时间轴</a>
+          <a href="#" th:href="@{/archives}" class="active m-item item m-mobile-hide"><i class="coffee icon"></i>流年记</a>
           <a href="#" th:href="@{/music}" class="m-item item m-mobile-hide"><i class="music icon"></i>音乐盒</a>
           <a href="#" th:href="@{/message}" class="m-item item m-mobile-hide"><i class="book icon"></i>留言板</a>
           <a href="#" th:href="@{/friends}" class="m-item item m-mobile-hide"><i class="pencil alternate icon"></i>友人帐</a>
           <a href="#" th:href="@{/picture}" class="m-item item m-mobile-hide"><i class="image icon"></i>照片墙</a>
+          <a href="#" th:href="@{/resources}" class="m-item item m-mobile-hide"><i class="graduation cap icon"></i>资源库</a>
           <a href="#" th:href="@{/about}" class="m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
         <!--</div>-->
         <div class="right m-item item m-mobile-hide">
@@ -41,31 +45,51 @@
     </a>
   </nav>
 
-<!--时间轴内容-->
-  <div class="doc-container m-padded-tb-massivex m-opacity" id="doc-container">
-      <th:block >
-        <section class="timeline">
-          <ul>
 
-            <li class="" th:each="blog : ${blogs}">
-              <div>
-                <time th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2020/01/01</time>
-                <div class="scientist" >
-                    <a href="#" target="_blank" th:href="@{/blog/{id}(id=${blog.id})}">
-                      <h3 class="state" style="text-align:center;font-size: 16px;color: #000;" th:text="${blog.title}">文章标题</h3>
-                    </a>
-                </div>
-              </div>
-            </li>
 
-          </ul>
-        </section>
-      </th:block>
+
+  <!--顶部背景图片-->
+  <div class="m-bg-type_outer" style="width: 100%;height: 40%">
+    <img src="../static/images/aboutbg.jpg" th:src="@{http://images.newstar.net.cn/img/liunian.jpg}" alt="" class="ui m-bg image" style="width: 100%;height: 100%">
+    <div class="m-bg-class_cover">
+      <div class="ui container" style="position: relative ;bottom: -540px;">
+        <div class="m-font-size-title" align="center" style="font-family:'STXingkai'">流年记</div>
+        <div class="m-font-size-text-init-title m-margin-top" align="center">对待生命，不妨大胆一点，因为我们终究要失去它</div>
+      </div>
+    </div>
   </div>
+
+<!--  背景音乐播放-->
+  <audio autoplay="autoplay" controls="controls" loop="loop" preload="auto" style="display: none"
+         src="../static/music/yaoyuandeni.mp3" th:src="@{/music/yaoyuandeni.mp3}">
+  </audio>
+
+<!--  流年记录-->
+  <div class="jazz-timeline-wrapper">
+    <div class="jazz-timeline multiline-timeline thin-timeline">
+
+      <div id="broadcast" class="timeline-post turqoise-post turqoise-trail" th:each="memory : ${memorys}">
+        <div class="timeline-icon icon-dot-full-white">
+          <div class="timeline-bar"></div>
+        </div>
+        <div class="timeline-content" >
+          <span style="color: #dddddd">ONESTAR ✍️</span>  <span class="" style="color: #dddddd" th:text="${#dates.format(memory.createTime,'yyyy-MM-dd HH:mm')}">2020年07月12日10:48:17 </span>
+          <div class="content-details">
+            <p th:text="${memory.memory}">国庆和中秋刚好在同一天</p>
+            <img  src="https://note.youdao.com/yws/api/personal/file/1DEBA60653854130B107CB49E3D3AD83?method=download&shareKey=3ace447cd59e0d0500d9000e82a8ae40" th:src="@{${memory.pictureAddress}}">
+
+          </div>
+        </div><!-- timeline content -->
+      </div><!-- .timeline-post -->
+
+    </div><!-- .timeline -->
+  </div><!-- .jazz-timeline-wrapper -->
+
+
 
   <!--置顶图标-->
   <div id="toolbar" class="m-padded-tb-large m-fixed m-right-bottom">
-    <a href="#" class="ui teal icon button"><i class="chevron up icon"></i> </a>
+    <a href="#" class="ui center aligned basic segment icon"><i class="ui medium orange chevron up icon"></i> </a>
   </div>
 
   <!--底部栏-->
@@ -136,14 +160,28 @@
   </footer>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+  <script src="../static/lib/jquery-3.2.1/jquery-3.2.1.min.js" th:src="@{/lib/jquery-3.2.1/jquery-3.2.1.min.js}"></script>
+  <script src="../static/lib/semantic/dist/semantic.min.js" th:src="@{/lib/semantic/dist/semantic.min.js}"></script>
   <script src="../static/lib/timeline/timeline.js" th:src="@{/lib/timeline/timeline.js}"></script>
   <script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
 
 
 
   <script>
+    var chars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+
+    function generateMixed(n) {
+      var res = "";
+      for (var i = 0; i < n; i++) {
+        var id = Math.ceil(Math.random() * 16);
+        res += chars[id];
+      }
+      return res;
+    }
+
+    var num = generateMixed(6);
+    var p = document.getElementById('broadcast');
+    p.style.color = "#" + num;
 
     // $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
 

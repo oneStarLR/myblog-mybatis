@@ -4,7 +4,7 @@
 
     <!--查询所有友链-->
     <select id="listFriendLink" resultType="com.star.entity.FriendLink">
-        select * from myblog.t_friend order by t_friend.create_time desc
+        select * from myblog.t_friend order by t_friend.create_time asc
     </select>
 
     <!--添加友链-->
@@ -13,14 +13,14 @@
         values (#{blogname},#{blogaddress},#{pictureaddress},#{createTime})
     </insert>
 
-    <!--根据id查询友链-->
-    <select id="getFriendLink" resultType="com.star.entity.FriendLink">
-        select * from myblog.t_friend f where f.id = #{id}
-    </select>
-
     <!--根据网址查询友链-->
     <select id="getFriendLinkByBlogaddress" resultType="com.star.entity.FriendLink">
         select * from myblog.t_friend f where f.blogaddress = #{blogaddress}
+    </select>
+
+    <!--根据id查询友链-->
+    <select id="getFriendLink" resultType="com.star.entity.FriendLink">
+        select * from myblog.t_friend f where f.id = #{id}
     </select>
 
     <!--编辑修改友链-->

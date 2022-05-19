@@ -1,16 +1,13 @@
 package com.star.entity;
 
-import com.star.queryvo.DetailedBlog;
-import org.springframework.format.annotation.DateTimeFormat;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 /**
  * @Description: 评论实体类
+ * @Date: Created in 11:12 2020/6/1
  * @Author: ONESTAR
- * @Date: Created in 9:09 2020/3/26
  * @QQ群: 530311074
  * @URL: https://onestar.newstar.net.cn/
  */
@@ -20,21 +17,16 @@ public class Comment {
     private String nickname;
     private String email;
     private String content;
-
-    //头像
     private String avatar;
     private Date createTime;
-
     private Long blogId;
     private Long parentCommentId;
-    private String parentNickname;
+    private boolean adminComment;
 
     //回复评论
     private List<Comment> replyComments = new ArrayList<>();
     private Comment parentComment;
-    private boolean adminComment;
-
-    private DetailedBlog blog;
+    private String parentNickname;
 
     public Comment() {
     }
@@ -103,12 +95,12 @@ public class Comment {
         this.parentCommentId = parentCommentId;
     }
 
-    public String getParentNickname() {
-        return parentNickname;
+    public boolean isAdminComment() {
+        return adminComment;
     }
 
-    public void setParentNickname(String parentNickname) {
-        this.parentNickname = parentNickname;
+    public void setAdminComment(boolean adminComment) {
+        this.adminComment = adminComment;
     }
 
     public List<Comment> getReplyComments() {
@@ -127,20 +119,12 @@ public class Comment {
         this.parentComment = parentComment;
     }
 
-    public DetailedBlog getBlog() {
-        return blog;
+    public String getParentNickname() {
+        return parentNickname;
     }
 
-    public void setBlog(DetailedBlog blog) {
-        this.blog = blog;
-    }
-
-    public boolean isAdminComment() {
-        return adminComment;
-    }
-
-    public void setAdminComment(boolean adminComment) {
-        this.adminComment = adminComment;
+    public void setParentNickname(String parentNickname) {
+        this.parentNickname = parentNickname;
     }
 
     @Override
@@ -154,11 +138,10 @@ public class Comment {
                 ", createTime=" + createTime +
                 ", blogId=" + blogId +
                 ", parentCommentId=" + parentCommentId +
-                ", parentNickname='" + parentNickname + '\'' +
+                ", adminComment=" + adminComment +
                 ", replyComments=" + replyComments +
                 ", parentComment=" + parentComment +
-                ", adminComment=" + adminComment +
-                ", blog=" + blog +
+                ", parentNickname='" + parentNickname + '\'' +
                 '}';
     }
 }

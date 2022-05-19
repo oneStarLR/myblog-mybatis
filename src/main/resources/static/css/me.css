@@ -1,5 +1,5 @@
 body{
-    background-image: url("../images/backimg1.jpg");
+    background-image: url("http://images.newstar.net.cn/img/bg.jpg") !important;
     background-attachment:fixed;
     background-size: 100%;
     no-repeat: center top;
@@ -7,6 +7,9 @@ body{
     height: 100%;
     width: 100%;
 }
+
+
+
 .m-bg{
     width: 100%;
     height: 650px;
@@ -230,6 +233,10 @@ body{
     max-width: 100em !important;
     margin: auto !important;
 }
+.m-container-mini-m{
+    max-width: 85em !important;
+    margin: auto !important;
+}
 .m-container {
     max-width: 72em !important;
     margin: auto !important;
@@ -242,6 +249,9 @@ body{
     max-width: 60em !important;
     margin: auto !important;
 }
+
+
+
 
 /*------shadow------*/
 .m-shadow-small {
@@ -394,7 +404,7 @@ body{
 
 .m-bg-class_cover {
     width: 100%;
-    height: 750px;
+    height: 800px;
     line-height: 50px;
     padding-left: 6px;
     background-color: rgba(0, 0, 0, .60);
@@ -564,4 +574,16 @@ body{
     background-image: url(https://a-oss.zmki.cn/2020/20200212-fcf30f3d33625.gif);
     background-size: 100% 100%;
 }
+
+.m-p1{
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*background: goldenrod;*/
+    white-space: nowrap;
+
+}
+
+/*style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;"*/
+
 

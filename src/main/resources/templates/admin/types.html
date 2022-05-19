@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>分类管理</title>
-  <link href="../static/images/favicon.ico" th:href="@{/images/me.jpg}" rel="icon" type="image/x-ico">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
-  <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分类管理</title>
+    <link href="../static/images/favicon.ico" th:href="@{/images/me.jpg}" rel="icon" type="image/x-ico">
+  <link rel="stylesheet" href="../../static/lib/semantic/dist/semantic.min.css" th:href="@{/lib/semantic/dist/semantic.min.css}">
+    <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
 </head>
 <body>
+
 
 <!--导航栏-->
 <nav class="ui inverted gird-header" >
@@ -17,8 +18,10 @@
       <h2 class="ui olive header item" style="font-family: STSong">管理后台</h2>
       <a href="#" th:href="@{/admin/blogs}" class="m-item item m-mobile-hide"><i class="home icon"></i>文章管理</a>
       <a href="#" th:href="@{/admin/types}" class="active m-item item m-mobile-hide"><i class="clone outline icon"></i>分类管理</a>
+      <a href="#" th:href="@{/admin/memorys}" class="m-item item m-mobile-hide"><i class="coffee icon"></i>流年记管理</a>
       <a href="#" th:href="@{/admin/friendlinks}" class="m-item item m-mobile-hide"><i class="pencil alternate icon"></i>友链管理</a>
       <a href="#" th:href="@{/admin/pictures}" class=" m-item item m-mobile-hide"><i class="image icon"></i>相册管理</a>
+      <a href="#" th:href="@{/admin/resources}" class="m-item item m-mobile-hide"><i class="graduation cap icon"></i>资源管理</a>
       <div class="right m-item m-mobile-hide menu">
         <div class="ui dropdown  item">
           <div class="text">
@@ -37,6 +40,7 @@
     <i class="sidebar icon"></i>
   </a>
 </nav>
+
 
   <div class="m-padded-tb-hugex">
   <div class="ui attached pointing menu">
@@ -105,6 +109,8 @@
       </table>
     </div>
   </div>
+
+
 
   <br>
   <br>
@@ -181,8 +187,8 @@
 
 </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<script src="../../static/lib/jquery-3.2.1/jquery-3.2.1.min.js" th:src="@{/lib/jquery-3.2.1/jquery-3.2.1.min.js}"></script>
+<script src="../../static/lib/semantic/dist/semantic.min.js" th:src="@{/lib/semantic/dist/semantic.min.js}"></script>
 
   <script>
 

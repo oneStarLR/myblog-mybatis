@@ -3,26 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ONESTAR-留言板</title>
+  <title>留言板-ONESTARの客栈</title>
+    <meta name=”Description” Content=”ONESTAR的个人博客，留言板页面，博客留言信息显示”>
+    <meta name=”Keywords” Content=”ONESTAR,留言板,留言″>
   <link href="../static/images/favicon.ico" th:href="@{/images/me.jpg}" rel="icon" type="image/x-ico">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+  <link rel="stylesheet" href="../static/lib/semantic/dist/semantic.min.css" th:href="@{/lib/semantic/dist/semantic.min.css}">
   <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
 </head>
-<body>
+<body  id="message-container">
 
 <!--导航-->
 <nav class="gird-header">
-  <div class="ui container">
+  <div class="ui m-container-mini-m">
     <div class="ui inverted secondary stackable menu">
       <h2 class="ui olive header item" style="font-family: STSong">ONESTAR</h2>
       <!--<div class="right m-item item m-mobile-hide">-->
         <a href="#" th:href="@{/}" class="m-item item m-mobile-hide "><i class="home icon"></i>首页</a>
         <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide"><i class="clone outline icon"></i>分类</a>
-        <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide"><i class="clock icon"></i>时间轴</a>
+        <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide"><i class="coffee icon"></i>流年记</a>
         <a href="#" th:href="@{/music}" class="m-item item m-mobile-hide"><i class="music icon"></i>音乐盒</a>
         <a href="#" th:href="@{/message}" class="active m-item item m-mobile-hide"><i class="book icon"></i>留言板</a>
         <a href="#" th:href="@{/friends}" class="m-item item m-mobile-hide"><i class="pencil alternate icon"></i>友人帐</a>
         <a href="#" th:href="@{/picture}" class="m-item item m-mobile-hide"><i class="image icon"></i>照片墙</a>
+        <a href="#" th:href="@{/resources}" class="m-item item m-mobile-hide"><i class="graduation cap icon"></i>资源库</a>
         <a href="#" th:href="@{/about}" class="m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
       <!--</div>-->
       <div class="right m-item item m-mobile-hide">
@@ -43,7 +46,7 @@
 
 <!--顶部图片-->
 <div class="m-bg-type_outer" style="width: 100%;height: 40%">
-  <img src="../static/images/messagebg.jpg" th:src="@{/images/messagebg.jpg}" alt="" class="ui m-bg image" style="width: 100%;height: 100%">
+  <img src="../static/images/messagebg.jpg" th:src="@{http://images.newstar.net.cn/img/messagebg.jpg}" alt="" class="ui m-bg image" style="width: 100%;height: 100%">
   <div class="m-bg-class_cover">
     <div class="ui container" style="position: relative ;bottom: -540px;">
       <div class="m-font-size-title m-right-bottom" align="center" style="font-family:'STXingkai'">留言板</div>
@@ -54,23 +57,27 @@
 </div>
 
 
+<span th:text="${msg}"></span>
+
 <!--中间内容-->
 <div id="waypoint" class="m-margin- animated fadeIn">
   <div class="ui container m-opacity box-shadow-max">
       <!--                新增留言-->
+
       <div id="message-form" class="ui form">
           <input type="hidden" name="parentMessage.id" value="-1">
           <!--                    留言区-->
           <div class="field">
               <textarea name="content" placeholder="请输入留言信息..."></textarea>
           </div>
+
           <div class="ui grid">
               <!--                    输入姓名-->
-              <div class="five wide column">
+              <div class="four wide column">
               <div class="field m-mobile-wide m-margin-bottom-small">
                   <div class="ui left icon input">
                       <i class="user icon"></i>
-                      <input type="text" name="nickname" placeholder="Id" th:value="${session.user}!=null ? ${session.user.nickname}">
+                      <input type="text" name="nickname" placeholder="昵称" th:value="${session.user}!=null ? ${session.user.nickname}">
                   </div>
               </div>
               </div>
@@ -80,25 +87,31 @@
               <div class="field m-mobile-wide m-margin-bottom-small">
                   <div class="ui left icon input">
                       <i class="mail icon"></i>
-                      <input type="text" name="email" placeholder="Email" th:value="${session.user}!=null ? ${session.user.email}">
+                      <input type="text" name="email" placeholder="邮件（请填写有效的邮件）" th:value="${session.user}!=null ? ${session.user.email}">
                   </div>
               </div>
               </div>
 
-              <div class="right aligned six wide column">
+              <div class="aligned five wide column" style="margin-top: 10px">
+<!--                  <div class="ui active inline loader"></div>-->
+                  <p style="color: red">新增邮件回复功能，回复将会通过邮件形式提醒</p>
+              </div>
+
+              <div class="right aligned two wide column">
               <div class="field m-mobile-wide m-margin-bottom-small">
-                  <button id="messagepost-btn" type="button" class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>
+                  <button id="messagepost-btn" type="button" class="ui teal button m-mobile-wide" onclick="javascript:{this.disabled=true;document.form1.submit();}" style="width:100px;height: 40px"><i class="edit icon"></i>发布</button>
               </div>
               </div>
           </div>
       </div>
       <!--留言区-->
       <div class="ui bottom attached m-margin-top">
-          <div id="message-container" class="ui teal segment">
+          <div  class="ui teal segment">
               <div th:fragment="messageList">
                   <div class="ui threaded comments" style="max-width: 100%;">
                       <h3 class="ui dividing header">留言</h3>
-                      <div class="comment" th:each="message : ${messages}">
+<!--                      <div class="comment" th:each="message : ${messages}">-->
+                      <div class="comment" th:each="message : ${messages.list}">
                           <a class="avatar">
                               <img src="../static/image/me.jpg" th:src="@{${message.avatar}}">
                           </a>
@@ -141,9 +154,42 @@
                           </div>
                       </div>
 
+
                   </div>
+
+<!--                  <hr class="m-margin-top-large">-->
+
+                  <!--分页-->
+<!--                  <div class="ui inverted divided stackable grid">-->
+<!--                      <div class="three wide column" align="center">-->
+<!--                          <a class="item" th:href="@{/message/(pageNum=${messages.hasPreviousPage}?${messages.prePage}:1)}" th:unless="${messages.isFirstPage}">上一页</a>-->
+<!--                      </div>-->
+
+<!--                      <div class="ten wide column" align="center">-->
+<!--                          <p> <span th:text="${messages.pageNum}"></span> / <span th:text="${messages.pages}"></span> </p>-->
+<!--                      </div>-->
+
+<!--                      <div class="three wide column" align="center">-->
+<!--                          <a class="item" th:href="@{/message/(pageNum=${messages.hasNextPage}?${messages.nextPage}:${messages.pages})}" th:unless="${messages.isLastPage}">下一页</a>-->
+<!--                      </div>-->
+<!--                  </div>-->
+
+
+              </div>
+          </div>
+<!--          分页-->
+          <div class="ui inverted divided stackable grid">
+              <div class="three wide column" align="center">
+                  <a class="item" th:href="@{/message/(pageNum=${messages.hasPreviousPage}?${messages.prePage}:1)}" th:unless="${messages.isFirstPage}">上一页</a>
               </div>
 
+              <div class="ten wide column" align="center">
+                  <p> <span th:text="${messages.pageNum}"></span> / <span th:text="${messages.pages}"></span> </p>
+              </div>
+
+              <div class="three wide column" align="center">
+                  <a class="item" th:href="@{/message/(pageNum=${messages.hasNextPage}?${messages.nextPage}:${messages.pages})}" th:unless="${messages.isLastPage}">下一页</a>
+              </div>
           </div>
 
       </div>
@@ -155,7 +201,6 @@
   </div>
 </div>
 
-
 <br>
 <br>
 <br>
@@ -163,7 +208,7 @@
 
 <!--置顶图标-->
 <div id="toolbar" class="m-padded-tb-large m-fixed m-right-bottom">
-    <a href="#" class="ui teal icon button"><i class="chevron up icon"></i> </a>
+    <a href="#" class="ui center aligned basic segment icon"><i class="ui medium orange chevron up icon"></i> </a>
 </div>
 
 
@@ -236,8 +281,9 @@
 </footer>
 
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<script src="../static/lib/jquery-3.2.1/jquery-3.2.1.min.js" th:src="@{/lib/jquery-3.2.1/jquery-3.2.1.min.js}"></script>
+<script src="../static/lib/semantic/dist/semantic.min.js" th:src="@{/lib/semantic/dist/semantic.min.js}"></script>
+
 
 
 <script>
@@ -327,9 +373,9 @@
     });
 
     // 初始化加载
-    $(function () {
-        $("#message-container").load(/*[[@{/messagecomment}]]*/"messagecomment");
-    });
+    // $(function () {
+    //     $("#message-container").load(/*[[@{/messagecomment}]]*/"messagecomment");
+    // });
 
     // 校验信息
     $('#messagepost-btn').click(function () {
@@ -341,6 +387,8 @@
             console.log('校验失败');
         }
     });
+
+
 
     //发送请求给后端
     function postData() {
@@ -354,6 +402,7 @@
 //        $(window).scrollTo($('#message-container'),500);
             clearContent();
         });
+
     }
 
     // 清除表单
