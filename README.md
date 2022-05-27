@@ -7,6 +7,8 @@
 
 ### 一、开发文档
 
+> 此开发文档是对应上一版本功能，最新版本还需要配置Redis和163邮件发送
+
 1、[【SpringBoot搭建个人博客】- 前端页面展示（一）](https://onestar.newstar.net.cn/blog/37)
 
 2、[【SpringBoot搭建个人博客】- 技术需求（二）](https://onestar.newstar.net.cn/blog/38)
