@@ -7,9 +7,7 @@ import org.springframework.cache.annotation.EnableCaching;
 @SpringBootApplication
 @EnableCaching   //注解配置启用缓存
 public class MyblogApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(MyblogApplication.class, args);
     }
-
 }
